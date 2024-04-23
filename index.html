@@ -606,217 +606,70 @@
                 <!-- Start Content-->
                 <div class="container-fluid">
 
-                    <div class="row">
+                    <div class="row pt-2">
                         <div class="col-12">
-                            <div class="page-title-box">
-                                <div class="page-title-right">
-                                    <form class="d-flex">
-                                        <div class="input-group">
-                                            <input type="text" class="form-control form-control-light"
-                                                id="dash-daterange">
-                                            <span class="input-group-text bg-primary border-primary text-white">
-                                                <i class="mdi mdi-calendar-range font-13"></i>
-                                            </span>
-                                        </div>
-                                        <a href="javascript: void(0);" class="btn btn-primary ms-2">
-                                            <i class="mdi mdi-autorenew"></i>
-                                        </a>
-                                        <a href="javascript: void(0);" class="btn btn-primary ms-1">
-                                            <i class="mdi mdi-filter-variant"></i>
-                                        </a>
-                                    </form>
-                                </div>
-                                <h4 class="page-title">Timeline</h4>
-                            </div>
-                        </div>
-                    </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row mb-2">
+                                        <div class="col-xl-6">
+                                            <form
+                                                class="row gy-2 gx-2 align-items-center justify-content-xl-start justify-content-between">
+                                                <div class="col-auto">
+                                                    <label for="inputPassword2" class="visually-hidden">Search</label>
+                                                    <input type="search" class="form-control" id="inputPassword2"
+                                                        placeholder="Search...">
+                                                </div>
 
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="row">
-                                <!-- start projects-->
-                                <div class="col-xxl-3 col-lg-4">
-                                    <div class="pe-xl-3">
-                                        <h5 class="mt-0 mb-3">Projects</h5>
-                                        <!-- start search box -->
-                                        <div class="app-search">
-                                            <form>
-                                                <div class="mb-2 position-relative w-100">
-                                                    <input type="text" class="form-control"
-                                                        placeholder="search by name..." />
-                                                    <span class="mdi mdi-magnify search-icon"></span>
+                                                <div class="col-auto">
+                                                    <div class="d-flex align-items-center">
+                                                        <label for="status-select" class="me-2">Status</label>
+                                                        <div class="dropdown">
+                                                            <button class="btn btn-light dropdown-toggle" type="button"
+                                                                id="dropdownMenuButton" data-bs-toggle="dropdown"
+                                                                aria-haspopup="true" aria-expanded="false">
+                                                                Show All
+                                                            </button>
+                                                            <div class="dropdown-menu"
+                                                                aria-labelledby="dropdownMenuButton">
+                                                                <a class="dropdown-item" href="#">
+                                                                    <i class='uil uil-record-audio'
+                                                                        style="color: var(--ct-secondary);"></i>
+                                                                    Open
+                                                                </a>
+                                                                <a class="dropdown-item" href="#">
+                                                                    <i class='uil uil-record-audio'
+                                                                        style="color: var(--ct-warning);"></i>
+                                                                    In Development
+                                                                </a>
+                                                                <a class="dropdown-item" href="#">
+                                                                    <i class='uil uil-record-audio'
+                                                                        style="color: var(--ct-info);"></i>
+                                                                    In Review
+                                                                </a>
+                                                                <a class="dropdown-item" href="#">
+                                                                    <i class='uil uil-record-audio'
+                                                                        style="color: var(--ct-danger);"></i>
+                                                                    On Hold
+                                                                </a>
+                                                                <a class="dropdown-item" href="#">
+                                                                    <i class='uil uil-record-audio'
+                                                                        style="color: var(--ct-success);"></i>
+                                                                    Complete
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </form>
                                         </div>
-                                        <!-- end search box -->
-                                    </div>
 
-                                    <div class="row">
-                                        <div class="col">
-                                            <div class="pe-xl-3" data-simplebar style="max-height: 535px;">
-                                                <a href="javascript:void(0);" class="text-body">
-                                                    <div class="d-flex mt-2 p-2">
-                                                        <div class="avatar-sm d-table">
-                                                            <span
-                                                                class="avatar-title bg-success-lighten rounded-circle text-success">
-                                                                <i class='uil uil-moonset font-24'></i>
-                                                            </span>
-                                                        </div>
-                                                        <div class="ms-2">
-                                                            <h5 class="mt-0 mb-0">
-                                                                Lunar
-                                                                <span class="badge badge-success-lighten ms-1">On
-                                                                    Track</span>
-                                                            </h5>
-                                                            <p class="mt-1 mb-0 text-muted">
-                                                                ID: proj101
-                                                            </p>
-                                                        </div>
-                                                    </div>
+                                        <div class="col-xl-6">
+                                            <div class="text-xl-end mt-xl-0 mt-2">
+                                                <a href="#add-task-offcanvas" data-bs-toggle="offcanvas"
+                                                    class="btn btn-success mb-2 me-2">
+                                                    <i class="uil uil-expand-arrows me-1"></i>
+                                                    Create Epic
                                                 </a>
-
-                                                <a href="javascript:void(0);" class="text-body">
-                                                    <div class="d-flex bg-light p-2">
-                                                        <div class="avatar-sm d-table">
-                                                            <span
-                                                                class="avatar-title bg-success-lighten rounded-circle text-success">
-                                                                <i class='uil uil-moon-eclipse font-24'></i>
-                                                            </span>
-                                                        </div>
-                                                        <div class="ms-2">
-                                                            <h5 class="mt-0 mb-0">
-                                                                Dark Moon
-                                                                <span class="badge badge-success-lighten ms-1">On
-                                                                    Track</span>
-                                                            </h5>
-                                                            <p class="mt-1 mb-0 text-muted">
-                                                                ID: proj102
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </a>
-
-                                                <a href="javascript:void(0);" class="text-body">
-                                                    <div class="d-flex mt-1 px-2 py-2">
-                                                        <div class="avatar-sm d-table">
-                                                            <span
-                                                                class="avatar-title bg-warning-lighten rounded-circle text-warning">
-                                                                <i class='uil uil-mountains font-24'></i>
-                                                            </span>
-                                                        </div>
-                                                        <div class="ms-2">
-                                                            <h5 class="mt-0 mb-0">
-                                                                Aurora
-                                                                <span
-                                                                    class="badge badge-warning-lighten ms-1">Locked</span>
-                                                            </h5>
-                                                            <p class="mt-1 mb-0 text-muted">
-                                                                ID: proj103
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </a>
-
-                                                <a href="javascript:void(0);" class="text-body">
-                                                    <div class="d-flex mt-1 px-2 py-2">
-                                                        <div class="avatar-sm d-table">
-                                                            <span
-                                                                class="avatar-title bg-warning-lighten rounded-circle text-warning">
-                                                                <i class='uil uil-moon font-24'></i>
-                                                            </span>
-                                                        </div>
-                                                        <div class="ms-2">
-                                                            <h5 class="mt-0 mb-0">
-                                                                Blue Moon
-                                                                <span
-                                                                    class="badge badge-warning-lighten ms-1">Locked</span>
-                                                            </h5>
-                                                            <p class="mt-1 mb-0 text-muted">
-                                                                ID: proj104
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </a>
-
-                                                <a href="javascript:void(0);" class="text-body">
-                                                    <div class="d-flex mt-1 px-2 py-2">
-                                                        <div class="avatar-sm d-table">
-                                                            <span
-                                                                class="avatar-title bg-danger-lighten rounded-circle text-danger">
-                                                                <i class='uil uil-ship font-24'></i>
-                                                            </span>
-                                                        </div>
-                                                        <div class="ms-2">
-                                                            <h5 class="mt-0 mb-0">
-                                                                Casanova
-                                                                <span
-                                                                    class="badge badge-danger-lighten ms-1">Delayed</span>
-                                                            </h5>
-                                                            <p class="mt-1 mb-0 text-muted">
-                                                                ID: proj106
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </a>
-
-                                                <a href="javascript:void(0);" class="text-body">
-                                                    <div class="d-flex mt-1 px-2 py-2">
-                                                        <div class="avatar-sm d-table">
-                                                            <span
-                                                                class="avatar-title bg-success-lighten rounded-circle text-success">
-                                                                <i class='uil uil-subway-alt font-24'></i>
-                                                            </span>
-                                                        </div>
-                                                        <div class="ms-2">
-                                                            <h5 class="mt-0 mb-0">
-                                                                Darwin
-                                                                <span class="badge badge-success-lighten ms-1">On
-                                                                    Track</span>
-                                                            </h5>
-                                                            <p class="mt-1 mb-0 text-muted">
-                                                                ID: proj107
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </a>
-
-                                                <a href="javascript:void(0);" class="text-body">
-                                                    <div class="d-flex mt-1 px-2 py-2">
-                                                        <div class="avatar-sm d-table">
-                                                            <span
-                                                                class="avatar-title bg-danger-lighten rounded-circle text-danger">
-                                                                <i class='uil uil-gold font-24'></i>
-                                                            </span>
-                                                        </div>
-                                                        <div class="ms-2">
-                                                            <h5 class="mt-0 mb-0">
-                                                                Eagle
-                                                                <span
-                                                                    class="badge badge-danger-lighten ms-1">Delayed</span>
-                                                            </h5>
-                                                            <p class="mt-1 mb-0 text-muted">
-                                                                ID: proj108
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- end projects -->
-
-                                <!-- gantt view -->
-                                <div class="col-xxl-9 mt-4 mt-xl-0 col-lg-8">
-                                    <div class="ps-xl-3">
-                                        <div class="row">
-                                            <div class="col-auto">
-                                                <a data-bs-toggle="offcanvas" href="#add-task-offcanvas"
-                                                    class="btn btn-success btn-sm mb-2">
-                                                    Add New Task
-                                                </a>
-                                            </div>
-                                            <div class="col text-sm-end">
                                                 <div class="btn-group btn-group-sm mb-2" data-bs-toggle="buttons"
                                                     id="modes-filter">
                                                     <label class="btn btn-primary d-none d-sm-inline-block">
@@ -844,18 +697,375 @@
                                                     </label>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div><!-- end col-->
+                                    </div>
 
-                                        <div class="row">
-                                            <div class="col mt-3">
-                                                <svg id="tasks-gantt"></svg>
+                                    <div class="row g-0">
+                                        <!-- start epic list -->
+                                        <div class="col-lg-6">
+                                            <div class="table-responsive">
+                                                <table class="table table-centered table-nowrap mb-0">
+                                                    <thead class="table-light">
+                                                        <tr>
+                                                            <th style="width: 10px; padding-bottom: 23px;">
+                                                                <div class="form-check">
+                                                                    <input type="checkbox" class="form-check-input"
+                                                                        id="customCheck1">
+                                                                    <label class="form-check-label"
+                                                                        for="customCheck1">&nbsp;</label>
+                                                                </div>
+                                                            </th>
+                                                            <th>Epic ID</th>
+                                                            <th>Epic Name</th>
+                                                            <th>Status</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+
+                                                        <tr>
+                                                            <td>
+                                                                <div class="form-check">
+                                                                    <input type="checkbox" class="form-check-input"
+                                                                        id="customCheck2">
+                                                                    <label class="form-check-label"
+                                                                        for="customCheck2">&nbsp;</label>
+                                                                </div>
+                                                            </td>
+                                                            <td><a href="#" class="text-body fw-bold">#EP0011</a>
+                                                            </td>
+                                                            <td>
+                                                                <div class="d-flex">
+                                                                    <div class="d-flex align-items-center">
+                                                                        <div class="flex-shrink-0">
+                                                                            <img src="assets/images/projects/project-1.jpg"
+                                                                                class="rounded-circle avatar-xs"
+                                                                                alt="friend">
+                                                                        </div>
+                                                                        <div class="flex-grow-1 ms-2">
+                                                                            <h5 class="my-0">Project 01</h5>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <h5 class="my-0"><span
+                                                                        class="badge badge-warning-lighten">
+                                                                        In Development
+                                                                    </span></h5>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <div class="form-check">
+                                                                    <input type="checkbox" class="form-check-input"
+                                                                        id="customCheck3">
+                                                                    <label class="form-check-label"
+                                                                        for="customCheck3">&nbsp;</label>
+                                                                </div>
+                                                            </td>
+                                                            <td><a href="#" class="text-body fw-bold">#EP0012</a>
+                                                            </td>
+                                                            <td>
+                                                                <div class="d-flex">
+                                                                    <div class="d-flex align-items-center">
+                                                                        <div class="flex-shrink-0">
+                                                                            <img src="assets/images/projects/project-2.jpg"
+                                                                                class="rounded-circle avatar-xs"
+                                                                                alt="friend">
+                                                                        </div>
+                                                                        <div class="flex-grow-1 ms-2">
+                                                                            <h5 class="my-0">Project 02</h5>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <h5 class="my-0"><span
+                                                                        class="badge badge-secondary-lighten">
+                                                                        Open
+                                                                    </span></h5>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <div class="form-check">
+                                                                    <input type="checkbox" class="form-check-input"
+                                                                        id="customCheck4">
+                                                                    <label class="form-check-label"
+                                                                        for="customCheck4">&nbsp;</label>
+                                                                </div>
+                                                            </td>
+                                                            <td><a href="#" class="text-body fw-bold">#EP0013</a>
+                                                            </td>
+                                                            <td>
+                                                                <div class="d-flex">
+                                                                    <div class="d-flex align-items-center">
+                                                                        <div class="flex-shrink-0">
+                                                                            <img src="assets/images/projects/project-3.jpg"
+                                                                                class="rounded-circle avatar-xs"
+                                                                                alt="friend">
+                                                                        </div>
+                                                                        <div class="flex-grow-1 ms-2">
+                                                                            <h5 class="my-0">Project 03</h5>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <h5 class="my-0"><span
+                                                                        class="badge badge-danger-lighten">
+                                                                        On Hold
+                                                                    </span></h5>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <div class="form-check">
+                                                                    <input type="checkbox" class="form-check-input"
+                                                                        id="customCheck5">
+                                                                    <label class="form-check-label"
+                                                                        for="customCheck5">&nbsp;</label>
+                                                                </div>
+                                                            </td>
+                                                            <td><a href="#" class="text-body fw-bold">#EP0014</a>
+                                                            </td>
+                                                            <td>
+                                                                <div class="d-flex">
+                                                                    <div class="d-flex align-items-center">
+                                                                        <div class="flex-shrink-0">
+                                                                            <img src="assets/images/projects/project-4.jpg"
+                                                                                class="rounded-circle avatar-xs"
+                                                                                alt="friend">
+                                                                        </div>
+                                                                        <div class="flex-grow-1 ms-2">
+                                                                            <h5 class="my-0">Project 04</h5>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <h5 class="my-0"><span class="badge badge-info-lighten">
+                                                                        In Review
+                                                                    </span></h5>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <div class="form-check">
+                                                                    <input type="checkbox" class="form-check-input"
+                                                                        id="customCheck6">
+                                                                    <label class="form-check-label"
+                                                                        for="customCheck6">&nbsp;</label>
+                                                                </div>
+                                                            </td>
+                                                            <td><a href="#" class="text-body fw-bold">#EP0015</a>
+                                                            </td>
+                                                            <td>
+                                                                <div class="d-flex">
+                                                                    <div class="d-flex align-items-center">
+                                                                        <div class="flex-shrink-0">
+                                                                            <img src="assets/images/projects/project-1.jpg"
+                                                                                class="rounded-circle avatar-xs"
+                                                                                alt="friend">
+                                                                        </div>
+                                                                        <div class="flex-grow-1 ms-2">
+                                                                            <h5 class="my-0">Project 05</h5>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <h5 class="my-0"><span
+                                                                        class="badge badge-success-lighten">
+                                                                        Complete
+                                                                    </span></h5>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <div class="form-check">
+                                                                    <input type="checkbox" class="form-check-input"
+                                                                        id="customCheck7">
+                                                                    <label class="form-check-label"
+                                                                        for="customCheck7">&nbsp;</label>
+                                                                </div>
+                                                            </td>
+                                                            <td><a href="#" class="text-body fw-bold">#EP0016</a>
+                                                            </td>
+                                                            <td>
+                                                                <div class="d-flex">
+                                                                    <div class="d-flex align-items-center">
+                                                                        <div class="flex-shrink-0">
+                                                                            <img src="assets/images/projects/project-2.jpg"
+                                                                                class="rounded-circle avatar-xs"
+                                                                                alt="friend">
+                                                                        </div>
+                                                                        <div class="flex-grow-1 ms-2">
+                                                                            <h5 class="my-0">Project 06</h5>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <h5 class="my-0"><span
+                                                                        class="badge badge-warning-lighten">
+                                                                        In Development
+                                                                    </span></h5>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <div class="form-check">
+                                                                    <input type="checkbox" class="form-check-input"
+                                                                        id="customCheck8">
+                                                                    <label class="form-check-label"
+                                                                        for="customCheck8">&nbsp;</label>
+                                                                </div>
+                                                            </td>
+                                                            <td><a href="#" class="text-body fw-bold">#EP0017</a>
+                                                            </td>
+                                                            <td>
+                                                                <div class="d-flex">
+                                                                    <div class="d-flex align-items-center">
+                                                                        <div class="flex-shrink-0">
+                                                                            <img src="assets/images/projects/project-3.jpg"
+                                                                                class="rounded-circle avatar-xs"
+                                                                                alt="friend">
+                                                                        </div>
+                                                                        <div class="flex-grow-1 ms-2">
+                                                                            <h5 class="my-0">Project 07</h5>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <h5 class="my-0"><span
+                                                                        class="badge badge-secondary-lighten">
+                                                                        Open
+                                                                    </span></h5>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <div class="form-check">
+                                                                    <input type="checkbox" class="form-check-input"
+                                                                        id="customCheck9">
+                                                                    <label class="form-check-label"
+                                                                        for="customCheck9">&nbsp;</label>
+                                                                </div>
+                                                            </td>
+                                                            <td><a href="#" class="text-body fw-bold">#EP0018</a>
+                                                            </td>
+                                                            <td>
+                                                                <div class="d-flex">
+                                                                    <div class="d-flex align-items-center">
+                                                                        <div class="flex-shrink-0">
+                                                                            <img src="assets/images/projects/project-4.jpg"
+                                                                                class="rounded-circle avatar-xs"
+                                                                                alt="friend">
+                                                                        </div>
+                                                                        <div class="flex-grow-1 ms-2">
+                                                                            <h5 class="my-0">Project 08</h5>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <h5 class="my-0"><span
+                                                                        class="badge badge-danger-lighten">
+                                                                        On Hold
+                                                                    </span></h5>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <div class="form-check">
+                                                                    <input type="checkbox" class="form-check-input"
+                                                                        id="customCheck10">
+                                                                    <label class="form-check-label"
+                                                                        for="customCheck10">&nbsp;</label>
+                                                                </div>
+                                                            </td>
+                                                            <td><a href="#" class="text-body fw-bold">#EP0019</a>
+                                                            </td>
+                                                            <td>
+                                                                <div class="d-flex">
+                                                                    <div class="d-flex align-items-center">
+                                                                        <div class="flex-shrink-0">
+                                                                            <img src="assets/images/projects/project-1.jpg"
+                                                                                class="rounded-circle avatar-xs"
+                                                                                alt="friend">
+                                                                        </div>
+                                                                        <div class="flex-grow-1 ms-2">
+                                                                            <h5 class="my-0">Project 09</h5>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <h5 class="my-0"><span class="badge badge-info-lighten">
+                                                                        In Review
+                                                                    </span></h5>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <div class="form-check">
+                                                                    <input type="checkbox" class="form-check-input"
+                                                                        id="customCheck11">
+                                                                    <label class="form-check-label"
+                                                                        for="customCheck11">&nbsp;</label>
+                                                                </div>
+                                                            </td>
+                                                            <td><a href="#" class="text-body fw-bold">#EP0020</a>
+                                                            </td>
+                                                            <td>
+                                                                <div class="d-flex">
+                                                                    <div class="d-flex align-items-center">
+                                                                        <div class="flex-shrink-0">
+                                                                            <img src="assets/images/projects/project-2.jpg"
+                                                                                class="rounded-circle avatar-xs"
+                                                                                alt="friend">
+                                                                        </div>
+                                                                        <div class="flex-grow-1 ms-2">
+                                                                            <h5 class="my-0">Project 10</h5>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <h5 class="my-0"><span
+                                                                        class="badge badge-success-lighten">
+                                                                        Complete
+                                                                    </span></h5>
+                                                            </td>
+                                                        </tr>
+
+                                                    </tbody>
+                                                </table>
                                             </div>
                                         </div>
+                                        <!-- end epic list -->
+
+                                        <!-- start gantt -->
+                                        <div class="col-lg-6">
+                                            <svg id="tasks-gantt"></svg>
+                                        </div>
+                                        <!-- end gantt -->
+
                                     </div>
-                                </div>
-                                <!-- end gantt view -->
-                            </div>
-                        </div>
+                                </div> <!-- end card-body-->
+                            </div> <!-- end card-->
+                        </div> <!-- end col -->
                     </div>
 
                 </div>

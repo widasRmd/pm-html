@@ -19464,10 +19464,10 @@ span.flatpickr-weekday {
   background: var(--ct-gray-100);
 }
 .gantt .bar-progress {
-  fill: var(--ct-primary);
+  fill: var(--ct-warning);
 }
 .gantt .bar-wrapper:hover .bar-progress {
-  fill: #6980e9;
+  fill: var(--ct-primary);
 }
 .gantt .bar,
 .gantt .bar-wrapper:hover .bar {
