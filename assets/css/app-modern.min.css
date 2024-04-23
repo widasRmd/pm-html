@@ -19526,4 +19526,7 @@ span.flatpickr-weekday {
 .gantt-container .popup-wrapper .pointer {
   display: none;
 }
+.gantt-container #tasks-gantt {
+  height: 650px;
+}
 /*# sourceMappingURL=app-modern.min.css.map */
