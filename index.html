@@ -1876,22 +1876,205 @@
                 </div>
 
                 <div class="modal-body">
-                    <h6>Text in a modal</h6>
-                    <p>Duis mollis, est non commodo luctus, nisi erat porttitor
-                        ligula.</p>
-                    <hr>
-                    <h6>Overflowing text to show scroll behavior</h6>
-                    <p>Cras mattis consectetur purus sit amet fermentum. Cras
-                        justo odio, dapibus ac facilisis in, egestas eget quam.
-                        Morbi leo risus, porta ac consectetur ac, vestibulum at
-                        eros.</p>
-                    <p>Praesent commodo cursus magna, vel scelerisque nisl
-                        consectetur et. Vivamus sagittis lacus vel augue laoreet
-                        rutrum faucibus dolor auctor.</p>
-                    <p>Aenean lacinia bibendum nulla sed consectetur. Praesent
-                        commodo cursus magna, vel scelerisque nisl consectetur
-                        et. Donec sed odio dui. Donec ullamcorper nulla non
-                        metus auctor fringilla.</p>
+
+                    <div class="row">
+
+                        <!-- Left Column -->
+                        <div class="col-xxl-8 col-lg-6">
+
+                            <!-- Epic card -->
+                            <div class="card d-block">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <h3 class="">Project 01</h3>
+                                        <div class="dropdown card-widgets">
+                                            <a href="#" class="dropdown-toggle arrow-none" data-bs-toggle="dropdown"
+                                                aria-expanded="false">
+                                                <i class='uil uil-ellipsis-h'></i>
+                                            </a>
+
+                                            <div class="dropdown-menu dropdown-menu-end">
+                                                <!-- item-->
+                                                <a href="javascript:void(0);" class="dropdown-item">
+                                                    <i class='uil uil-edit me-1'></i>Edit
+                                                </a>
+                                                <div class="dropdown-divider"></div>
+                                                <!-- item-->
+                                                <a href="javascript:void(0);" class="dropdown-item text-danger">
+                                                    <i class='uil uil-trash-alt me-1'></i>Delete
+                                                </a>
+                                            </div> <!-- end dropdown menu-->
+                                        </div> <!-- end dropdown-->
+                                        <!-- project title-->
+                                    </div>
+
+                                    <div class="d-flex ">
+                                        <div class="badge badge-lg bg-warning mb-3">In Development</div>
+
+                                        <div class="form-check ms-2">
+                                            <input type="checkbox" class="form-check-input" id="completedCheck">
+                                            <label class="form-check-label" for="completedCheck">
+                                                Mark as completed
+                                            </label>
+                                        </div> <!-- end form-check-->
+                                    </div>
+
+                                    <h5>Description:</h5>
+
+                                    <p class="text-muted mb-2">
+                                        With supporting text below as a natural lead-in to additional contenposuere erat
+                                        a ante. Voluptates, illo, iste itaque voluptas
+                                        corrupti ratione reprehenderit magni similique? Tempore, quos delectus
+                                        asperiores libero voluptas quod perferendis! Voluptate,
+                                        quod illo rerum? Lorem ipsum dolor sit amet.
+                                    </p>
+
+                                    <div class="row">
+
+                                        <div class="col-md-4">
+                                            <div class="mb-4">
+                                                <p class="mt-2 mb-1 text-muted fw-bold font-12 text-uppercase">
+                                                    Business User
+                                                </p>
+                                                <h5 class="mt-1 font-14">User 158</h5>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <div class="mb-4">
+                                                <p class="mt-2 mb-1 text-muted fw-bold font-12 text-uppercase">
+                                                    Directorate
+                                                </p>
+                                                <h5 class="mt-1 font-14">Directorate 1</h5>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <div class="mb-4">
+                                                <p class="mt-2 mb-1 text-muted fw-bold font-12 text-uppercase">IT Vendor
+                                                </p>
+                                                <h5 class="mt-1 font-14">Vendor A01</h5>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <div class="mb-4">
+                                                <p class="mt-2 mb-1 text-muted fw-bold font-12 text-uppercase">Start
+                                                    Date</p>
+                                                <div class="d-flex">
+                                                    <i class='uil uil-schedule font-18 text-success me-1'></i>
+                                                    <div>
+                                                        <h5 class="mt-1 font-14">
+                                                            17 March 2018
+                                                        </h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <div class="mb-4">
+                                                <p class="mt-2 mb-1 text-muted fw-bold font-12 text-uppercase">Due Date
+                                                </p>
+                                                <div class="d-flex">
+                                                    <i class='uil uil-schedule font-18 text-success me-1'></i>
+                                                    <div>
+                                                        <h5 class="mt-1 font-14">
+                                                            Today
+                                                        </h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- PIC -->
+                                    <div id="tooltip-container">
+                                        <h5>PIC :</h5>
+                                        <a href="javascript:void(0);" data-bs-container="#tooltip-container"
+                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Mat Helme"
+                                            class="d-inline-block">
+                                            <img src="assets/images/users/avatar-6.jpg"
+                                                class="rounded-circle img-thumbnail avatar-sm" alt="friend">
+                                        </a>
+
+                                        <a href="javascript:void(0);" data-bs-container="#tooltip-container"
+                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Michael Zenaty"
+                                            class="d-inline-block">
+                                            <img src="assets/images/users/avatar-7.jpg"
+                                                class="rounded-circle img-thumbnail avatar-sm" alt="friend">
+                                        </a>
+
+                                        <a href="javascript:void(0);" data-bs-container="#tooltip-container"
+                                            data-bs-toggle="tooltip" data-bs-placement="top" title="James Anderson"
+                                            class="d-inline-block">
+                                            <img src="assets/images/users/avatar-8.jpg"
+                                                class="rounded-circle img-thumbnail avatar-sm" alt="friend">
+                                        </a>
+
+                                        <a href="javascript:void(0);" data-bs-container="#tooltip-container"
+                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Mat Helme"
+                                            class="d-inline-block">
+                                            <img src="assets/images/users/avatar-4.jpg"
+                                                class="rounded-circle img-thumbnail avatar-sm" alt="friend">
+                                        </a>
+
+                                        <a href="javascript:void(0);" data-bs-container="#tooltip-container"
+                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Michael Zenaty"
+                                            class="d-inline-block">
+                                            <img src="assets/images/users/avatar-5.jpg"
+                                                class="rounded-circle img-thumbnail avatar-sm" alt="friend">
+                                        </a>
+
+                                        <a href="javascript:void(0);" data-bs-container="#tooltip-container"
+                                            data-bs-toggle="tooltip" data-bs-placement="top" title="James Anderson"
+                                            class="d-inline-block">
+                                            <img src="assets/images/users/avatar-3.jpg"
+                                                class="rounded-circle img-thumbnail avatar-sm" alt="friend">
+                                        </a>
+                                    </div>
+
+                                </div> <!-- end card-body-->
+                            </div> <!-- end card-->
+                        </div> <!-- end col -->
+
+                        <!-- Right Column -->
+                        <div class="col-lg-6 col-xxl-4">
+
+                            <!-- Cover -->
+                            <div class="card">
+                                <div class="card-body">
+                                    <form action="/" method="post" class="dropzone" id="myAwesomeDropzone"
+                                        data-plugin="dropzone" data-previews-container="#file-previews"
+                                        data-upload-preview-template="#uploadPreviewTemplate">
+                                        <div class="fallback">
+                                            <input name="file" type="file" />
+                                        </div>
+
+                                        <div class="dz-message needsclick">
+                                            <img src="assets/images/projects/project-3.jpg" alt="image"
+                                                class="img-fluid rounded" />
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <!-- Progress -->
+                            <div class=" card">
+                                <div class="card-body">
+                                    <h5 class="card-title mb-3">Progress</h5>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 25%;"
+                                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
                 </div>
 
                 <div class="modal-footer">
@@ -2135,9 +2318,10 @@
                             <label class="form-label">Project</label>
                             <select class="form-select form-control-light">
                                 <option>Select</option>
-                                <option>Hyper - Admin Dashboard</option>
-                                <option>CRM - Design & Development</option>
-                                <option>iOS - App Design</option>
+                                <option>#EP0011 - Project 01</option>
+                                <option>#EP0011 - Project 02</option>
+                                <option>#EP0011 - Project 03</option>
+                                <option>#EP0011 - Project 04</option>
                             </select>
                         </div>
 
@@ -2145,16 +2329,6 @@
                             <label for="task-title" class="form-label">Title</label>
                             <input type="text" class="form-control form-control-light" id="task-title"
                                 placeholder="Enter title">
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="task-priority2" class="form-label">Priority</label>
-                            <select class="form-select form-control-light" id="task-priority2">
-                                <option>Low</option>
-                                <option>Medium</option>
-                                <option>High</option>
-                                <option>Urgent</option>
-                            </select>
                         </div>
 
                         <div class="mb-3">
