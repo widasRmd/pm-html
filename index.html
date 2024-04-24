@@ -150,11 +150,17 @@
                         </a>
                         <div class="dropdown-menu dropdown-menu-animated dropdown-lg p-0">
                             <form class="p-3">
-                                <input type="search" class="form-control" placeholder="Search ..."
+                                <input type="search" class="form-control" placeholder="Search by Epic / ID..."
                                     aria-label="Recipient's username">
                             </form>
                         </div>
                     </li>
+
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                        data-bs-target="#create-epic-modal">
+                        <i class="uil uil-expand-arrows me-1"></i>
+                        Create Epic
+                    </button>
 
                     <li class="dropdown notification-list">
                         <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" role="button"
@@ -303,60 +309,6 @@
                                 class="dropdown-item text-center text-primary notify-item border-top border-light py-2">
                                 View All
                             </a>
-
-                        </div>
-                    </li>
-
-                    <li class="dropdown d-none d-sm-inline-block">
-                        <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" role="button"
-                            aria-haspopup="false" aria-expanded="false">
-                            <i class="ri-apps-2-line font-22"></i>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated dropdown-lg p-0">
-
-                            <div class="p-2">
-                                <div class="row g-0">
-                                    <div class="col">
-                                        <a class="dropdown-icon-item" href="#">
-                                            <img src="assets/images/brands/slack.png" alt="slack">
-                                            <span>Slack</span>
-                                        </a>
-                                    </div>
-                                    <div class="col">
-                                        <a class="dropdown-icon-item" href="#">
-                                            <img src="assets/images/brands/github.png" alt="Github">
-                                            <span>GitHub</span>
-                                        </a>
-                                    </div>
-                                    <div class="col">
-                                        <a class="dropdown-icon-item" href="#">
-                                            <img src="assets/images/brands/dribbble.png" alt="dribbble">
-                                            <span>Dribbble</span>
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="row g-0">
-                                    <div class="col">
-                                        <a class="dropdown-icon-item" href="#">
-                                            <img src="assets/images/brands/bitbucket.png" alt="bitbucket">
-                                            <span>Bitbucket</span>
-                                        </a>
-                                    </div>
-                                    <div class="col">
-                                        <a class="dropdown-icon-item" href="#">
-                                            <img src="assets/images/brands/dropbox.png" alt="dropbox">
-                                            <span>Dropbox</span>
-                                        </a>
-                                    </div>
-                                    <div class="col">
-                                        <a class="dropdown-icon-item" href="#">
-                                            <img src="assets/images/brands/g-suite.png" alt="G Suite">
-                                            <span>G Suite</span>
-                                        </a>
-                                    </div>
-                                </div> <!-- end row-->
-                            </div>
 
                         </div>
                     </li>
@@ -617,7 +569,7 @@
                                                 <div class="col-auto">
                                                     <label for="inputPassword2" class="visually-hidden">Search</label>
                                                     <input type="search" class="form-control" id="inputPassword2"
-                                                        placeholder="Search...">
+                                                        placeholder="Search by Epic / ID...">
                                                 </div>
 
                                                 <div class="col-auto">
@@ -666,9 +618,9 @@
                                         <div class="col-xl-6">
                                             <div class="text-xl-end mt-xl-0 mt-2">
                                                 <a href="#add-task-offcanvas" data-bs-toggle="offcanvas"
-                                                    class="btn btn-success mb-2 me-2">
-                                                    <i class="uil uil-expand-arrows me-1"></i>
-                                                    Create Epic
+                                                    class="btn btn-light mb-2 me-2">
+                                                    <i class="uil uil-align-center-h me-1"></i>
+                                                    Add Task
                                                 </a>
                                                 <div class="btn-group btn-group-sm mb-2" data-bs-toggle="buttons"
                                                     id="modes-filter">
@@ -1912,6 +1864,23 @@
             <div class="row">
                 <div class="col">
                     <button type="button" class="btn btn-light w-100" id="reset-layout">Reset</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Create Epic Modal -->
+    <div class="modal fade" id="create-epic-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myLargeModalLabel">Create Epic
+                    </h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
                 </div>
             </div>
         </div>
