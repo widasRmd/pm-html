@@ -18380,12 +18380,13 @@ span.flatpickr-weekday {
   background: var(--ct-input-bg-custom);
   border-radius: 6px;
   cursor: pointer;
-  min-height: 150px;
+  min-height: 100px;
   padding: 20px;
+  align-items: center;
 }
 .dropzone .dz-message {
   text-align: center;
-  margin: 2rem 0;
+  /* margin: 0.5rem 0; */
 }
 .dropzone.dz-started .dz-message {
   display: none;
