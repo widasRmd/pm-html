@@ -19528,6 +19528,6 @@ span.flatpickr-weekday {
   display: none;
 }
 .gantt-container #tasks-gantt {
-  height: 650px;
+  height: auto;
 }
 /*# sourceMappingURL=app-modern.min.css.map */
