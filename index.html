@@ -155,17 +155,11 @@
                         </a>
                         <div class="dropdown-menu dropdown-menu-animated dropdown-lg p-0">
                             <form class="p-3">
-                                <input type="search" class="form-control" placeholder="Search by Epic / ID..."
+                                <input type="search" class="form-control" placeholder="Search ..."
                                     aria-label="Recipient's username">
                             </form>
                         </div>
                     </li>
-
-                    <button type="button" class="btn btn-success" data-bs-toggle="modal"
-                        data-bs-target="#create-epic-modal">
-                        <i class="uil uil-expand-arrows me-1"></i>
-                        Create Epic
-                    </button>
 
                     <li class="dropdown notification-list">
                         <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" role="button"
@@ -587,27 +581,13 @@
 
                                         <div class="col-xl-6">
                                             <div class="text-xl-end mt-xl-0 mt-2">
-                                                <a href="#add-task-offcanvas" data-bs-toggle="offcanvas"
-                                                    class="btn btn-light mb-2 me-2">
-                                                    <i class="uil uil-align-center-h me-1"></i>
-                                                    Add Task
-                                                </a>
+                                                <button type="button" class="btn btn-success mb-2 me-2"
+                                                    data-bs-toggle="modal" data-bs-target="#create-epic-modal">
+                                                    <i class="uil uil-expand-arrows me-1"></i>
+                                                    Create Epic
+                                                </button>
                                                 <div class="btn-group btn-group-sm mb-2" data-bs-toggle="buttons"
                                                     id="modes-filter">
-                                                    <label class="btn btn-primary d-none d-sm-inline-block">
-                                                        <input class="btn-check" type="radio" name="modes" id="qday"
-                                                            value="Quarter Day">
-                                                        Quarter Day
-                                                    </label>
-                                                    <label class="btn btn-primary">
-                                                        <input class="btn-check" type="radio" name="modes" id="hday"
-                                                            value="Half Day"> Half
-                                                        Day
-                                                    </label>
-                                                    <label class="btn btn-primary">
-                                                        <input class="btn-check" type="radio" name="modes" id="day"
-                                                            value="Day"> Day
-                                                    </label>
                                                     <label class="btn btn-primary active">
                                                         <input class="btn-check" type="radio" name="modes" id="week"
                                                             value="Week" checked>
@@ -682,6 +662,59 @@
                                                                     </span></h5>
                                                             </td>
                                                         </tr>
+
+                                                        <!-- Start Task table -->
+                                                        <tr>
+                                                            <td></td>
+                                                            <td><a href="javascript: void" data-bs-toggle="modal"
+                                                                    data-bs-target="#epic-detail-modal"
+                                                                    class="text-body fw-bold"></a>
+                                                            </td>
+                                                            <td>
+                                                                <div class="d-flex">
+                                                                    <div class="d-flex align-items-center">
+                                                                        <i class="uil uil-align-center-h me-1"></i>
+                                                                        <div class="flex-grow-1 ms-2">
+                                                                            <h5 class="my-0"
+                                                                                style="max-width: 200px; overflow: hidden; text-overflow: ellipsis;">
+                                                                                Task title 01 </h5>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <h5 class="my-0"><span
+                                                                        class="badge badge-success-lighten">
+                                                                        Complete
+                                                                    </span></h5>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td></td>
+                                                            <td><a href="javascript: void" data-bs-toggle="modal"
+                                                                    data-bs-target="#epic-detail-modal"
+                                                                    class="text-body fw-bold"></a>
+                                                            </td>
+                                                            <td>
+                                                                <div class="d-flex">
+                                                                    <div class="d-flex align-items-center">
+                                                                        <i class="uil uil-align-center-h me-1"></i>
+                                                                        <div class="flex-grow-1 ms-2">
+                                                                            <h5 class="my-0"
+                                                                                style="max-width: 200px; overflow: hidden; text-overflow: ellipsis;">
+                                                                                Task title 02 </h5>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <h5 class="my-0"><span class="badge badge-info-lighten">
+                                                                        In Review
+                                                                    </span></h5>
+                                                            </td>
+                                                        </tr>
+                                                        <!-- End Task table -->
 
                                                         <tr>
                                                             <td>
@@ -1887,24 +1920,31 @@
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between align-items-center mb-2">
                                         <h3 class="">Project 01</h3>
-                                        <div class="dropdown card-widgets">
-                                            <a href="#" class="dropdown-toggle arrow-none" data-bs-toggle="dropdown"
-                                                aria-expanded="false">
-                                                <i class='uil uil-ellipsis-h'></i>
+                                        <div>
+                                            <a href="#add-task-offcanvas" data-bs-toggle="offcanvas"
+                                                class="btn btn-success mb-2 me-3">
+                                                <i class="uil uil-align-center-h me-1"></i>
+                                                Add Task
                                             </a>
+                                            <div class="dropdown card-widgets">
+                                                <a href="#" class="dropdown-toggle arrow-none" data-bs-toggle="dropdown"
+                                                    aria-expanded="false">
+                                                    <i class='uil uil-ellipsis-h'></i>
+                                                </a>
 
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">
-                                                    <i class='uil uil-edit me-1'></i>Edit
-                                                </a>
-                                                <div class="dropdown-divider"></div>
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item text-danger">
-                                                    <i class='uil uil-trash-alt me-1'></i>Delete
-                                                </a>
-                                            </div> <!-- end dropdown menu-->
-                                        </div> <!-- end dropdown-->
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <!-- item-->
+                                                    <a href="javascript:void(0);" class="dropdown-item">
+                                                        <i class='uil uil-edit me-1'></i>Edit
+                                                    </a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <!-- item-->
+                                                    <a href="javascript:void(0);" class="dropdown-item text-danger">
+                                                        <i class='uil uil-trash-alt me-1'></i>Delete
+                                                    </a>
+                                                </div> <!-- end dropdown menu-->
+                                            </div> <!-- end dropdown-->
+                                        </div>
                                         <!-- project title-->
                                     </div>
 
@@ -2597,15 +2637,91 @@
                 </div>
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
+
+        <!-- Add New Task -->
+        <div class="offcanvas offcanvas-end" tabindex="1" id="add-task-offcanvas">
+            <div class="d-flex align-items-center bg-primary p-3 offcanvas-header">
+                <h5 class="text-white m-0">Add New Task</h5>
+                <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+
+            <div class="offcanvas-body p-0">
+                <div data-simplebar class="">
+                    <div class="card mb-0 p-3">
+                        <form class="p-2">
+                            <div class="mb-3">
+                                <label class="form-label">Project</label>
+                                <select class="form-select form-control-light">
+                                    <option>Select</option>
+                                    <option>#EP0011 - Project 01</option>
+                                    <option>#EP0011 - Project 02</option>
+                                    <option>#EP0011 - Project 03</option>
+                                    <option>#EP0011 - Project 04</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="task-title" class="form-label">Title</label>
+                                <input type="text" class="form-control form-control-light" id="task-title"
+                                    placeholder="Enter title">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="task-description" class="form-label">Description</label>
+                                <textarea class="form-control form-control-light" id="task-description"
+                                    rows="3"></textarea>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="assign-to" class="form-label">Assign To</label>
+                                <select class="form-select form-control-light" id="assign-to">
+                                    <option>Alena Khim</option>
+                                    <option>Robert Carlile</option>
+                                    <option>Louis Allen</option>
+                                    <option>Sean White</option>
+                                    <option>Riley Steele</option>
+                                    <option>Zak Turnbull</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="task-priority2" class="form-label">Priority</label>
+                                <select class="form-select form-control-light" id="task-priority2">
+                                    <option>Low</option>
+                                    <option>Medium</option>
+                                    <option>High</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="due-date" class="form-label">Due Date</label>
+                                <input type="date" class="form-control form-control-light " id="due-date"
+                                    data-toggle="date-picker" data-single-date-picker="true">
+                            </div>
+
+                            <div class="mb-2 pt-2">
+                                <button type="submit" class="btn btn-primary w-100">Create</button>
+                            </div>
+
+                            <div class="mb-3">
+                                <button type="button" class="btn btn-light w-100" data-bs-dismiss="offcanvas"
+                                    aria-label="Close">Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Create Epic Modal -->
-    <div class="modal fade" id="create-epic-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    <div class="modal fade" id="create-epic-modal" tabindex="-1" role="dialog" aria-labelledby="createEpicModal"
         aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title" id="myLargeModalLabel">Create New Epic
+                    <h4 class="modal-title" id="createEpicModal">Create New Epic
                     </h4>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
@@ -2815,80 +2931,7 @@
         </div>
     </div>
 
-    <!-- Add New Task -->
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="add-task-offcanvas">
-        <div class="d-flex align-items-center bg-primary p-3 offcanvas-header">
-            <h5 class="text-white m-0">Add New Task</h5>
-            <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="offcanvas"
-                aria-label="Close"></button>
-        </div>
 
-        <div class="offcanvas-body p-0">
-            <div data-simplebar class="">
-                <div class="card mb-0 p-3">
-                    <form class="p-2">
-                        <div class="mb-3">
-                            <label class="form-label">Project</label>
-                            <select class="form-select form-control-light">
-                                <option>Select</option>
-                                <option>#EP0011 - Project 01</option>
-                                <option>#EP0011 - Project 02</option>
-                                <option>#EP0011 - Project 03</option>
-                                <option>#EP0011 - Project 04</option>
-                            </select>
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="task-title" class="form-label">Title</label>
-                            <input type="text" class="form-control form-control-light" id="task-title"
-                                placeholder="Enter title">
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="task-description" class="form-label">Description</label>
-                            <textarea class="form-control form-control-light" id="task-description" rows="3"></textarea>
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="assign-to" class="form-label">Assign To</label>
-                            <select class="form-select form-control-light" id="assign-to">
-                                <option>Alena Khim</option>
-                                <option>Robert Carlile</option>
-                                <option>Louis Allen</option>
-                                <option>Sean White</option>
-                                <option>Riley Steele</option>
-                                <option>Zak Turnbull</option>
-                            </select>
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="task-priority2" class="form-label">Priority</label>
-                            <select class="form-select form-control-light" id="task-priority2">
-                                <option>Low</option>
-                                <option>Medium</option>
-                                <option>High</option>
-                            </select>
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="due-date" class="form-label">Due Date</label>
-                            <input type="date" class="form-control form-control-light " id="due-date"
-                                data-toggle="date-picker" data-single-date-picker="true">
-                        </div>
-
-                        <div class="mb-2 pt-2">
-                            <button type="submit" class="btn btn-primary w-100">Create</button>
-                        </div>
-
-                        <div class="mb-3">
-                            <button type="button" class="btn btn-light w-100" data-bs-dismiss="offcanvas"
-                                aria-label="Close">Cancel</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Vendor js -->
     <script src="assets/js/vendor.min.js"></script>

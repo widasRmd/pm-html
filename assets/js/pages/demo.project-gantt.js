@@ -10,6 +10,20 @@ $(function () {
           progress: 55,
         },
         {
+          id: "1a",
+          name: "Project 01",
+          start: "2024-07-19",
+          end: "2024-07-29",
+          progress: 55,
+        },
+        {
+          id: "1b",
+          name: "Project 02",
+          start: "2024-07-22",
+          end: "2024-07-30",
+          progress: 85,
+        },
+        {
           id: "2",
           name: "Project 02",
           start: "2024-07-19",
