@@ -19530,4 +19530,12 @@ span.flatpickr-weekday {
 .gantt-container #tasks-gantt {
   height: auto;
 }
+
+#arrowExpand {
+  cursor: pointer;
+}
+
+.arrow-expand.active {
+  transform: rotate(90deg);
+}
 /*# sourceMappingURL=app-modern.min.css.map */
