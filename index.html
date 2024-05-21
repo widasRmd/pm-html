@@ -526,27 +526,36 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-body">
-                                    <div class="row mb-2">
-                                        <div class="col-lg-6">
-                                            <form
-                                                class="row gy-2 gx-2 align-items-center justify-content-xl-start justify-content-between">
-                                                <div class="col-auto">
-                                                    <label for="inputPassword2" class="visually-hidden">Search</label>
-                                                    <input type="search" class="form-control" id="inputPassword2"
-                                                        placeholder="Search by Epic / ID...">
-                                                </div>
+                                    <div class="row mb-2 justify-content-between">
+                                        <div class="col-auto">
+                                            <div class="row gy-2 gx-2 align-items-center justify-content-xl-start">
+                                                <form class="col-auto d-flex">
+                                                    <div class="col-auto">
+                                                        <label for="inputPassword2"
+                                                            class="visually-hidden">Search</label>
+                                                        <input type="search" class="form-control" id="inputPassword2"
+                                                            placeholder="Search by Epic / ID...">
+                                                    </div>
+
+                                                    <button type="submit" class="btn btn-primary">
+                                                        <i class="uil uil-search"></i>
+                                                    </button>
+                                                </form>
 
                                                 <div class="col-auto">
                                                     <div class="d-flex align-items-center">
-                                                        <label for="status-select" class="me-2">Status</label>
+                                                        <!-- <label for="status-select" class="me-2">Status</label> -->
                                                         <div class="dropdown">
                                                             <button class="btn btn-light dropdown-toggle" type="button"
                                                                 id="dropdownMenuButton" data-bs-toggle="dropdown"
                                                                 aria-haspopup="true" aria-expanded="false">
-                                                                Show All
+                                                                Status
                                                             </button>
                                                             <div class="dropdown-menu"
                                                                 aria-labelledby="dropdownMenuButton">
+                                                                <a class="dropdown-item" href="#">
+                                                                    Show All
+                                                                </a>
                                                                 <a class="dropdown-item" href="#">
                                                                     <i class='uil uil-record-audio'
                                                                         style="color: var(--ct-secondary);"></i>
@@ -576,10 +585,32 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </form>
+
+                                                <div class="col-auto">
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="dropdown">
+                                                            <button class="btn btn-light dropdown-toggle" type="button"
+                                                                id="dropdownMenuButton" data-bs-toggle="dropdown"
+                                                                aria-haspopup="true" aria-expanded="false">
+                                                                Filter
+                                                            </button>
+                                                            <div class="dropdown-menu"
+                                                                aria-labelledby="dropdownMenuButton">
+                                                                <a class="dropdown-item" href="#">
+                                                                    Show All
+                                                                </a>
+                                                                <a class="dropdown-item" href="#">
+                                                                    My Epic
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
                                         </div>
 
-                                        <div class="col-lg-6">
+                                        <div class="col-auto">
                                             <div class="text-xl-end mt-xl-0 mt-2">
                                                 <button type="button" class="btn btn-success mb-2 me-2"
                                                     data-bs-toggle="modal" data-bs-target="#create-epic-modal">
@@ -2149,7 +2180,7 @@
                                 </div> <!-- end card-body-->
                             </div> <!-- end card-->
 
-                            <!-- Tasks List -->
+                            <!-- Tasks List start -->
                             <div class="card">
                                 <div class="card-body">
                                     <h4 class="mt-0 mb-3">Task List</h4>
@@ -2176,7 +2207,8 @@
                                                                 <button type="button"
                                                                     class="btn btn-sm btn-warning dropdown-toggle me-2"
                                                                     data-bs-toggle="dropdown" aria-haspopup="true"
-                                                                    aria-expanded="false">In Development</button>
+                                                                    aria-expanded="false">In
+                                                                    Development</button>
                                                                 <div class="dropdown-menu">
                                                                     <a class="dropdown-item" href="#">
                                                                         <i class='uil uil-record-audio'
@@ -2252,7 +2284,8 @@
                                                                 <button type="button"
                                                                     class="btn btn-sm btn-warning dropdown-toggle me-2"
                                                                     data-bs-toggle="dropdown" aria-haspopup="true"
-                                                                    aria-expanded="false">In Development</button>
+                                                                    aria-expanded="false">In
+                                                                    Development</button>
                                                                 <div class="dropdown-menu">
                                                                     <a class="dropdown-item" href="#">
                                                                         <i class='uil uil-record-audio'
@@ -2328,7 +2361,8 @@
                                                                 <button type="button"
                                                                     class="btn btn-sm btn-warning dropdown-toggle me-2"
                                                                     data-bs-toggle="dropdown" aria-haspopup="true"
-                                                                    aria-expanded="false">In Development</button>
+                                                                    aria-expanded="false">In
+                                                                    Development</button>
                                                                 <div class="dropdown-menu">
                                                                     <a class="dropdown-item" href="#">
                                                                         <i class='uil uil-record-audio'
@@ -2408,7 +2442,7 @@
 
                                         <h5 class="m-0 pb-2">
                                             <a class="text-dark" data-bs-toggle="collapse" href="#openTasks"
-                                                role="button" aria-expanded="false" aria-controls="openTasks">
+                                                role="button" aria-expanded="true" aria-controls="openTasks">
                                                 <i class='uil uil-angle-down font-18'></i>Open <span
                                                     class="text-muted">(3)</span>
                                             </a>
@@ -2654,29 +2688,280 @@
 
                                 </div> <!-- end card-body-->
                             </div>
+                            <!-- Tasks List end -->
+
+                            <!-- Tabs Content start -->
+                            <ul class="nav nav-tabs mb-2">
+                                <li class="nav-item">
+                                    <a href="#comments" data-bs-toggle="tab" aria-expanded="false"
+                                        class="nav-link rounded-0 active">
+                                        <span class="d-md-block">Comments</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#histories" data-bs-toggle="tab" aria-expanded="false"
+                                        class="nav-link rounded-0">
+                                        <span class="d-md-block">History</span>
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content">
+                                <div class="tab-pane show active" id="comments">
+
+                                    <!-- Comments start -->
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h4 class="my-1">Comments (51)</h4>
+                                        </div>
+                                        <div class="card-body">
+
+                                            <div class="d-flex">
+                                                <img class="me-2 rounded-circle" src="assets/images/users/avatar-3.jpg"
+                                                    alt="Generic placeholder image" height="32">
+                                                <div class="w-100">
+                                                    <h5 class="mt-0">Jeremy Tomlinson <small
+                                                            class="text-muted float-end">5
+                                                            hours ago</small></h5>
+                                                    Nice work, makes me think of The Money Pit.
+
+                                                    <br />
+                                                    <a href="javascript: void(0);"
+                                                        class="text-muted font-13 d-inline-block mt-2"><i
+                                                            class="mdi mdi-reply"></i> Reply</a>
+
+                                                    <div class="d-flex mt-3">
+                                                        <a class="pe-2" href="#">
+                                                            <img src="assets/images/users/avatar-4.jpg"
+                                                                class="rounded-circle" alt="Generic placeholder image"
+                                                                height="32">
+                                                        </a>
+                                                        <div class="w-100">
+                                                            <h5 class="mt-0">Thelma Fridley <small
+                                                                    class="text-muted float-end">3 hours ago</small>
+                                                            </h5>
+                                                            i'm in the middle of a timelapse animation myself! (Very
+                                                            different
+                                                            though.) Awesome stuff.
+
+                                                            <br />
+                                                            <a href="javascript: void(0);"
+                                                                class="text-muted font-13 d-inline-block mt-2">
+                                                                <i class="mdi mdi-reply"></i> Reply
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex mt-3">
+                                                <img class="me-2 rounded-circle" src="assets/images/users/avatar-5.jpg"
+                                                    alt="Generic placeholder image" height="32">
+                                                <div class="w-100">
+                                                    <h5 class="mt-0">Kevin Martinez <small
+                                                            class="text-muted float-end">1 day
+                                                            ago</small></h5>
+                                                    It would be very nice to have.
+
+                                                    <br />
+                                                    <a href="javascript: void(0);"
+                                                        class="text-muted font-13 d-inline-block mt-2"><i
+                                                            class="mdi mdi-reply"></i> Reply</a>
+                                                </div>
+                                            </div>
+
+                                            <div class="text-center mt-2">
+                                                <a href="javascript:void(0);" class="text-muted">Load more
+                                                </a>
+                                            </div>
+
+                                            <div class="border rounded mt-4">
+                                                <form action="#" class="comment-area-box">
+                                                    <textarea rows="3" class="form-control border-0 resize-none"
+                                                        placeholder="Your comment..."></textarea>
+                                                    <div
+                                                        class="p-2 bg-light d-flex justify-content-between align-items-center">
+                                                        <div>
+                                                            <!-- <a href="#" class="btn btn-sm px-1 btn-light"><i
+                                                                    class='mdi mdi-upload'></i></a>
+                                                            <a href="#" class="btn btn-sm px-1 btn-light"><i
+                                                                    class='mdi mdi-at'></i></a> -->
+                                                        </div>
+                                                        <button type="submit" class="btn btn-sm btn-success"><i
+                                                                class='uil uil-message me-1'></i>Submit</button>
+                                                    </div>
+                                                </form>
+                                            </div> <!-- end .border-->
+
+                                        </div> <!-- end card-body-->
+                                    </div>
+                                    <!-- Comments end -->
+
+                                </div>
+
+                                <div class="tab-pane" id="histories">
+
+                                    <!-- Histories start -->
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h4 class="mt-0 mb-3">Activity Logs</h4>
+
+                                            <div class="table-responsive">
+                                                <table class="table table-centered table-nowrap table-hover mb-0">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="d-flex align-items-start">
+                                                                    <img class="me-2 rounded-circle"
+                                                                        src="assets/images/users/avatar-2.jpg"
+                                                                        width="40" alt="Generic placeholder image">
+                                                                    <div>
+                                                                        <h5 class="mt-0 mb-1">
+                                                                            Soren Drouin
+                                                                            <small class="fw-normal ms-2">
+                                                                                Created Epic
+                                                                            </small>
+                                                                        </h5>
+                                                                        <span class="font-13">
+                                                                            Epic Name...
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="text-end">
+                                                                <small class="fw-normal">
+                                                                    18 Jan 2019 11:28
+                                                                </small>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <div class="d-flex align-items-start">
+                                                                    <img class="me-2 rounded-circle"
+                                                                        src="assets/images/users/avatar-3.jpg"
+                                                                        width="40" alt="Generic placeholder image">
+                                                                    <div>
+                                                                        <h5 class="mt-0 mb-1">Nicolas Chartier
+                                                                            <small class="fw-normal ms-2">
+                                                                                Created Task
+                                                                            </small>
+                                                                        </h5>
+                                                                        <span class="font-13">
+                                                                            Task Name...
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="text-end">
+                                                                <small class="fw-normal">
+                                                                    18 Jan 2019 11:28
+                                                                </small>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <div class="d-flex align-items-start">
+                                                                    <img class="me-2 rounded-circle"
+                                                                        src="assets/images/users/avatar-6.jpg"
+                                                                        width="40" alt="Generic placeholder image">
+                                                                    <div>
+                                                                        <h5 class="mt-0 mb-1">Anne Simard
+                                                                            <small class="fw-normal ms-2">
+                                                                                Updated task priority
+                                                                            </small>
+                                                                        </h5>
+                                                                        <span class="font-13">
+                                                                            <span
+                                                                                class="badge badge-info-lighten p-1">Medium</span>
+                                                                            <i class='uil uil-arrow-right mx-1'></i>
+                                                                            <span
+                                                                                class="badge badge-danger-lighten p-1">High</span>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="text-end">
+                                                                <small class="fw-normal">
+                                                                    18 Jan 2019 11:28
+                                                                </small>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <div class="d-flex align-items-start">
+                                                                    <img class="me-2 rounded-circle"
+                                                                        src="assets/images/users/avatar-4.jpg"
+                                                                        width="40" alt="Generic placeholder image">
+                                                                    <div>
+                                                                        <h5 class="mt-0 mb-1">Gano Cloutier
+                                                                            <small class="fw-normal ms-2">
+                                                                                Updated Status
+                                                                            </small>
+                                                                        </h5>
+                                                                        <span class="font-13">
+                                                                            <span
+                                                                                class="badge badge-outline-secondary p-1">Open</span>
+                                                                            <i class='uil uil-arrow-right mx-1'></i>
+                                                                            <span
+                                                                                class="badge badge-outline-warning p-1">In
+                                                                                Development</span>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="text-end">
+                                                                <small class="fw-normal">
+                                                                    18 Jan 2019 11:28
+                                                                </small>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <div class="d-flex align-items-start">
+                                                                    <img class="me-2 rounded-circle"
+                                                                        src="assets/images/users/avatar-5.jpg"
+                                                                        width="40" alt="Generic placeholder image">
+                                                                    <div>
+                                                                        <h5 class="mt-0 mb-1">Francis Achin
+                                                                            <small class="fw-normal ms-2">
+                                                                                Write Comment
+                                                                            </small>
+                                                                        </h5>
+                                                                        <span class="font-13 text-wrap">
+                                                                            Lorem Ipsum is simply dummy text of the
+                                                                            printing and typesetting industry. Lorem
+                                                                            Ipsum has been the industry's standard
+                                                                            dummy text ever since the 1500s
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="text-end">
+                                                                <small class="fw-normal">
+                                                                    18 Jan 2019 11:28
+                                                                </small>
+                                                            </td>
+                                                        </tr>
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                        </div> <!-- end card-body-->
+                                    </div>
+                                    <!-- Histories end -->
+
+                                </div>
+                            </div>
+                            <!-- Tabs Content end -->
                         </div> <!-- end col -->
 
                         <!-- Right Column -->
                         <div class="col-lg-6 col-xxl-4">
-
-                            <!-- Cover -->
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title mb-3">Cover</h5>
-                                    <form action="/" method="post" class="dropzone" id="myAwesomeDropzone"
-                                        data-plugin="dropzone" data-previews-container="#file-previews"
-                                        data-upload-preview-template="#uploadPreviewTemplate">
-                                        <div class="fallback">
-                                            <input name="file" type="file" />
-                                        </div>
-
-                                        <div class="dz-message needsclick">
-                                            <img src="assets/images/projects/project-3.jpg" alt="image"
-                                                class="img-fluid rounded" />
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
 
                             <!-- Progress -->
                             <div class="card">
@@ -2687,6 +2972,135 @@
                                             aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+
+                            <!-- Attachments -->
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title mb-3">Attachments</h5>
+
+                                    <form action="/" method="post" class="dropzone" id="myAwesomeDropzone"
+                                        data-plugin="dropzone" data-previews-container="#file-previews"
+                                        data-upload-preview-template="#uploadPreviewTemplate">
+                                        <div class="fallback">
+                                            <input name="file" type="file" />
+                                        </div>
+
+                                        <div class="dz-message needsclick">
+                                            <i class="h3 text-muted ri-upload-cloud-2-line"></i>
+                                            <h5 class="mb-1">Drop files here or click to upload.</h5>
+                                            <span class="text-muted font-13 mt-0">Maximum size
+                                                <strong>3MB</strong></span>
+                                        </div>
+                                    </form>
+
+                                    <!-- Preview -->
+                                    <div class="dropzone-previews mt-3" id="file-previews"></div>
+
+                                    <!-- file preview template -->
+                                    <div class="d-none" id="uploadPreviewTemplate">
+                                        <div class="card mt-1 mb-0 shadow-none border">
+                                            <div class="p-2">
+                                                <div class="row align-items-center">
+                                                    <div class="col-auto">
+                                                        <img data-dz-thumbnail src="#"
+                                                            class="avatar-sm rounded bg-light" alt="">
+                                                    </div>
+                                                    <div class="col ps-0">
+                                                        <a href="javascript:void(0);" class="text-muted fw-bold"
+                                                            data-dz-name></a>
+                                                        <p class="mb-0" data-dz-size></p>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <!-- Button -->
+                                                        <a href="" class="btn btn-link btn-lg text-muted"
+                                                            data-dz-remove>
+                                                            <i class="ri-close-line"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end file preview template -->
+
+
+                                    <div class="card my-1 shadow-none border">
+                                        <div class="p-2">
+                                            <div class="row align-items-center">
+                                                <div class="col-auto">
+                                                    <div class="avatar-sm">
+                                                        <span class="avatar-title rounded">
+                                                            .ZIP
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="col ps-0">
+                                                    <a href="javascript:void(0);"
+                                                        class="text-muted fw-bold">Hyper-admin-design.zip</a>
+                                                    <p class="mb-0">2.3 MB</p>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <!-- Button -->
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-link btn-lg text-muted">
+                                                        <i class="ri-download-2-line"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card mb-1 shadow-none border">
+                                        <div class="p-2">
+                                            <div class="row align-items-center">
+                                                <div class="col-auto">
+                                                    <img src="assets/images/projects/project-1.jpg"
+                                                        class="avatar-sm rounded" alt="file-image" />
+                                                </div>
+                                                <div class="col ps-0">
+                                                    <a href="javascript:void(0);"
+                                                        class="text-muted fw-bold">Dashboard-design.jpg</a>
+                                                    <p class="mb-0">3.25 MB</p>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <!-- Button -->
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-link btn-lg text-muted">
+                                                        <i class="ri-download-2-line"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card mb-0 shadow-none border">
+                                        <div class="p-2">
+                                            <div class="row align-items-center">
+                                                <div class="col-auto">
+                                                    <div class="avatar-sm">
+                                                        <span class="avatar-title bg-secondary text-light rounded">
+                                                            .MP4
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="col ps-0">
+                                                    <a href="javascript:void(0);"
+                                                        class="text-muted fw-bold">Admin-bug-report.mp4</a>
+                                                    <p class="mb-0">7.05 MB</p>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <!-- Button -->
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-link btn-lg text-muted">
+                                                        <i class="ri-download-2-line"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
 
@@ -2980,69 +3394,24 @@
                                     data-date-autoclose="true">
                             </div>
 
-                            <!-- Directorate -->
-                            <div class="mb-0 mt-3">
-                                <label for="directorate" class="form-label">Directorate</label>
-
-                                <select class="form-control select2" data-toggle="select2">
-                                    <option>Select</option>
-                                    <option value="AZ">Directorate 1</option>
-                                    <option value="CO">Directorate 2</option>
-                                    <option value="ID">Directorate 3</option>
-                                    <option value="MT">Directorate 4</option>
-                                </select>
-
-                            </div>
-
                         </div> <!-- end col-->
 
                         <div class="col-xl-6">
                             <div class="mb-3 mt-3 mt-xl-0">
-                                <label for="projectname" class="mb-0">Cover</label>
-                                <p class="text-muted font-14">Recommended thumbnail size 800x400 (px).
-                                </p>
 
-                                <form action="/" method="post" class="dropzone" id="myAwesomeDropzone"
-                                    data-plugin="dropzone" data-previews-container="#file-previews"
-                                    data-upload-preview-template="#uploadPreviewTemplate">
-                                    <div class="fallback">
-                                        <input name="file" type="file" />
-                                    </div>
+                                <!-- Directorate -->
+                                <div class="mb-0">
+                                    <label for="directorate" class="form-label">Directorate</label>
 
-                                    <div class="dz-message needsclick">
-                                        <i class="h3 text-muted ri-upload-cloud-2-line"></i>
-                                        <h4>Drop files here or click to upload.</h4>
-                                    </div>
-                                </form>
+                                    <select class="form-control select2" data-toggle="select2">
+                                        <option>Select</option>
+                                        <option value="AZ">Directorate 1</option>
+                                        <option value="CO">Directorate 2</option>
+                                        <option value="ID">Directorate 3</option>
+                                        <option value="MT">Directorate 4</option>
+                                    </select>
 
-                                <!-- Preview -->
-                                <div class="dropzone-previews mt-3" id="file-previews"></div>
-
-                                <!-- file preview template -->
-                                <div class="d-none" id="uploadPreviewTemplate">
-                                    <div class="card mt-1 mb-0 shadow-none border">
-                                        <div class="p-2">
-                                            <div class="row align-items-center">
-                                                <div class="col-auto">
-                                                    <img data-dz-thumbnail src="#" class="avatar-sm rounded bg-light"
-                                                        alt="">
-                                                </div>
-                                                <div class="col ps-0">
-                                                    <a href="javascript:void(0);" class="text-muted fw-bold"
-                                                        data-dz-name></a>
-                                                    <p class="mb-0" data-dz-size></p>
-                                                </div>
-                                                <div class="col-auto">
-                                                    <!-- Button -->
-                                                    <a href="" class="btn btn-link btn-lg text-muted" data-dz-remove>
-                                                        <i class="ri-close-line"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
-                                <!-- end file preview template -->
 
                                 <!-- Requester -->
                                 <div class="mb-0 mt-3">
@@ -3060,7 +3429,6 @@
                                         <option value="ND">Lorene Block</option>
                                         <option value="UT">Mike Baker</option>
                                     </select>
-
                                 </div>
 
                                 <!-- IT Vendor -->
