@@ -7,7 +7,7 @@
     this.initCharts();
   }),
     (t.prototype.initCharts = function () {
-      var t = ["#727cf5", "#0acf97"],
+      var t = ["#727cf5", "#ff7a00", "#0acf97"],
         o = e("#crm-project-statistics").data("colors"),
         r = {
           chart: { height: 326, type: "bar", toolbar: { show: !1 } },
@@ -15,17 +15,25 @@
             bar: { horizontal: !1, endingShape: "rounded", columnWidth: "25%" },
           },
           dataLabels: { enabled: !1 },
-          stroke: { show: !0, width: 3, colors: ["transparent"] },
+          stroke: { show: !0, width: 8, colors: ["transparent"] },
           colors: (t = o ? o.split(",") : t),
           series: [
-            { name: "Projects", data: [56, 38, 85, 72, 28, 69, 55, 52, 69] },
             {
-              name: "Working Hours",
-              data: [176, 185, 256, 240, 187, 205, 191, 114, 194],
+              name: "Open",
+              data: [56, 38, 85, 72, 28, 69, 55, 52, 69, 38, 85, 72],
+            },
+            {
+              name: "In Progress",
+              data: [120, 80, 64, 150, 300, 101, 20, 270, 65, 80, 64, 150],
+            },
+            {
+              name: "Done",
+              data: [176, 185, 256, 240, 187, 205, 191, 114, 194, 64, 150, 300],
             },
           ],
           xaxis: {
             categories: [
+              "Jan",
               "Feb",
               "Mar",
               "Apr",
@@ -35,6 +43,8 @@
               "Aug",
               "Sep",
               "Oct",
+              "Nov",
+              "Dec",
             ],
           },
           legend: { offsetY: 7 },
@@ -50,13 +60,13 @@
             document.querySelector("#crm-project-statistics"),
             r
           ).render(),
-          ["#727cf5", "#0acf97"]),
+          ["#727cf5", "#ff7a00", "#0acf97"]),
         r = {
           chart: { height: 256, type: "donut" },
           legend: { show: !1 },
           stroke: { colors: ["transparent"] },
-          series: [82, 37],
-          labels: ["Done Projects", "Pending Projects"],
+          series: [15, 38, 186],
+          labels: ["Open", "In Progress", "Done"],
           colors: (t = (o = e("#monthly-target").data("colors"))
             ? o.split(",")
             : t),
@@ -81,7 +91,7 @@
       o.CrmProject.init();
     });
   })(window.jQuery);
-var colors = ["#727cf5", "#0acf97", "#fa5c7c", "#ffbc00"],
+var colors = ["#727cf5", "#ff7a00", "#0acf97", "#ffbc00"],
   dataColors = $("#project-overview-chart").data("colors"),
   options = {
     chart: { height: 326, type: "radialBar" },

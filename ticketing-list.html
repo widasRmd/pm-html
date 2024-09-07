@@ -3,10 +3,9 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Projects | Project Management</title>
+    <title>List Ticketing | Project Management</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="" name="description" />
-    <meta content="Coderthemes" name="author" />
+    <meta content="" name="" />
 
     <!-- App favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.ico">
@@ -19,6 +18,19 @@
 
     <!-- Icons css -->
     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Datatables css -->
+    <link href="assets/vendor/datatables.net-bs5/css/dataTables.bootstrap5.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/vendor/datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css" rel="stylesheet"
+        type="text/css" />
+    <link href="assets/vendor/datatables.net-fixedcolumns-bs5/css/fixedColumns.bootstrap5.min.css" rel="stylesheet"
+        type="text/css" />
+    <link href="assets/vendor/datatables.net-fixedheader-bs5/css/fixedHeader.bootstrap5.min.css" rel="stylesheet"
+        type="text/css" />
+    <link href="assets/vendor/datatables.net-buttons-bs5/css/buttons.bootstrap5.min.css" rel="stylesheet"
+        type="text/css" />
+    <link href="assets/vendor/datatables.net-select-bs5/css/select.bootstrap5.min.css" rel="stylesheet"
+        type="text/css" />
 </head>
 
 <body>
@@ -540,638 +552,479 @@
                 <!-- Start Content-->
                 <div class="container-fluid">
 
-                    <!-- start page title -->
+                    <!-- Start page title -->
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box">
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="javascript: void(0);">Main Plan</a></li>
-                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Projects</a></li>
-                                        <li class="breadcrumb-item active">Projects List</li>
+                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboard</a></li>
+                                        <li class="breadcrumb-item active">List Ticketing</li>
                                     </ol>
                                 </div>
-                                <h4 class="page-title">Projects List</h4>
+                                <h4 class="page-title">List Ticketing</h4>
                             </div>
                         </div>
                     </div>
-                    <!-- end page title -->
+                    <!-- End page title -->
 
-                    <div class="row mb-2">
-                        <div class="col-sm-4">
-                            <a href="apps-projects-add.html" class="btn btn-danger rounded-pill mb-3"><i
-                                    class="mdi mdi-plus"></i> Create Project</a>
-                        </div>
-                        <div class="col-sm-8">
-                            <div class="text-sm-end">
-                                <div class="btn-group mb-3">
-                                    <button type="button" class="btn btn-primary">All</button>
-                                </div>
-                                <div class="btn-group mb-3 ms-1">
-                                    <button type="button" class="btn btn-light">Ongoing</button>
-                                    <button type="button" class="btn btn-light">Finished</button>
-                                </div>
-                                <div class="btn-group mb-3 ms-2 d-none d-sm-inline-block">
-                                    <button type="button" class="btn btn-secondary"><i
-                                            class="ri-function-line"></i></button>
-                                </div>
-                                <div class="btn-group mb-3 d-none d-sm-inline-block">
-                                    <button type="button" class="btn btn-link text-muted"><i
-                                            class="ri-list-check-2"></i></button>
+                    <!-- Start Filter -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <form
+                                        class="row row-cols-md-2 row-cols-lg-3 row-cols-xl-4 gy-2 gx-2 align-items-center">
+                                        <div>
+                                            <div class="d-flex align-items-center">
+                                                <label for="status-select" class="me-2">Status</label>
+                                                <select class="form-select" id="status-select">
+                                                    <option selected>All</option>
+                                                    <option value="1">Open</option>
+                                                    <option value="2">In Progress</option>
+                                                    <option value="3">Done</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="d-flex align-items-center">
+                                                <label for="status-select" class="me-2">Lokasi</label>
+                                                <select class="form-select" id="status-select">
+                                                    <option selected>All</option>
+                                                    <option value="1">Lokasi 1</option>
+                                                    <option value="2">Lokasi 2</option>
+                                                    <option value="3">Lokasi 3</option>
+                                                    <option value="4">Lokasi 4</option>
+                                                    <option value="5">Lokasi 5</option>
+                                                    <option value="6">Lokasi 6</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="d-flex align-items-center">
+                                                <label for="status-select" class="me-2">PIC</label>
+                                                <select class="form-select" id="status-select">
+                                                    <option selected>All</option>
+                                                    <option value="1">PIC A</option>
+                                                    <option value="2">PIC B</option>
+                                                    <option value="3">PIC C</option>
+                                                    <option value="4">PIC D</option>
+                                                    <option value="5">PIC E</option>
+                                                    <option value="6">PIC F</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <button type="button" class="btn btn-primary w-100"><i
+                                                    class="mdi mdi-filter"></i>
+                                                Submit
+                                            </button>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    <!-- Start Filter -->
+
+                    <!-- Start Table New Ticket -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="header-title mb-3">New Tickets</h4>
+
+                                    <table id="basic-datatable" class="table dt-responsive nowrap w-100">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th>No. ID</th>
+                                                <th>Status</th>
+                                                <th>Location</th>
+                                                <th>User</th>
+                                                <th>Issue</th>
+                                                <th>Type</th>
+                                                <th>Date</th>
+                                                <th>PIC</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr>
+                                                <td>#ID-201</td>
+                                                <td>
+                                                    <div class="btn btn-sm text-light rounded-pill"
+                                                        style="background-color: #727cf5;">
+                                                        Open
+                                                    </div>
+                                                </td>
+                                                <td>KP</td>
+                                                <td>
+                                                    <div class="d-flex">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex-shrink-0">
+                                                                <img src="assets/images/users/avatar-5.jpg"
+                                                                    class="rounded-circle avatar-xs" alt="friend">
+                                                            </div>
+                                                            <div class="flex-grow-1 ms-2">
+                                                                <h5 class="my-0">Bryan Collier</h5>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>P-Office</td>
+                                                <td>Aplikasi</td>
+                                                <td>20 Juni 2024 - 16:14</td>
+                                                <td class="text-primary">Assign to me</td>
+                                                <td>
+                                                    <a href="javascript:void(0);" class="action-icon"
+                                                        data-bs-toggle="modal" data-bs-target="#ticket-detail-modal">
+                                                        <i class="mdi mdi-exit-to-app"></i></a>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>#ID-202</td>
+                                                <td>
+                                                    <div class="btn btn-sm text-light rounded-pill"
+                                                        style="background-color: #727cf5;">
+                                                        Open
+                                                    </div>
+                                                </td>
+                                                <td>KP</td>
+                                                <td>
+                                                    <div class="d-flex">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex-shrink-0">
+                                                                <img src="assets/images/users/avatar-4.jpg"
+                                                                    class="rounded-circle avatar-xs" alt="friend">
+                                                            </div>
+                                                            <div class="flex-grow-1 ms-2">
+                                                                <h5 class="my-0">Myrtle Johnson</h5>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>I-Vendor</td>
+                                                <td>Aplikasi</td>
+                                                <td>21 Juni 2024 - 15:10</td>
+                                                <td class="text-primary">Assign to me</td>
+                                                <td>
+                                                    <a href="javascript:void(0);" class="action-icon"
+                                                        data-bs-toggle="modal" data-bs-target="#ticket-detail-modal">
+                                                        <i class="mdi mdi-exit-to-app"></i></a>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>#ID-203</td>
+                                                <td>
+                                                    <div class="btn btn-sm text-light rounded-pill"
+                                                        style="background-color: #727cf5;">
+                                                        Open
+                                                    </div>
+                                                </td>
+                                                <td>KP</td>
+                                                <td>
+                                                    <div class="d-flex">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex-shrink-0">
+                                                                <img src="assets/images/users/avatar-3.jpg"
+                                                                    class="rounded-circle avatar-xs" alt="friend">
+                                                            </div>
+                                                            <div class="flex-grow-1 ms-2">
+                                                                <h5 class="my-0">Sara Lewis</h5>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>I-Vendor</td>
+                                                <td>Aplikasi</td>
+                                                <td>21 Juni 2024 - 19:32</td>
+                                                <td class="text-primary">Assign to me</td>
+                                                <td>
+                                                    <a href="javascript:void(0);" class="action-icon"
+                                                        data-bs-toggle="modal" data-bs-target="#ticket-detail-modal">
+                                                        <i class="mdi mdi-exit-to-app"></i></a>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>#ID-204</td>
+                                                <td>
+                                                    <div class="btn btn-sm text-light rounded-pill"
+                                                        style="background-color: #727cf5;">
+                                                        Open
+                                                    </div>
+                                                </td>
+                                                <td>KP</td>
+                                                <td>
+                                                    <div class="d-flex">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex-shrink-0">
+                                                                <img src="assets/images/users/avatar-2.jpg"
+                                                                    class="rounded-circle avatar-xs" alt="friend">
+                                                            </div>
+                                                            <div class="flex-grow-1 ms-2">
+                                                                <h5 class="my-0">Adam Thomas</h5>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>I-Vendor</td>
+                                                <td>Aplikasi</td>
+                                                <td>22 Juli 2024 - 05:22</td>
+                                                <td class="text-primary">Assign to me</td>
+                                                <td>
+                                                    <a href="javascript:void(0);" class="action-icon"
+                                                        data-bs-toggle="modal" data-bs-target="#ticket-detail-modal">
+                                                        <i class="mdi mdi-exit-to-app"></i></a>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>#ID-205</td>
+                                                <td>
+                                                    <div class="btn btn-sm text-light rounded-pill"
+                                                        style="background-color: #727cf5;">
+                                                        Open
+                                                    </div>
+                                                </td>
+                                                <td>KP</td>
+                                                <td>
+                                                    <div class="d-flex">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex-shrink-0">
+                                                                <img src="assets/images/users/avatar-1.jpg"
+                                                                    class="rounded-circle avatar-xs" alt="friend">
+                                                            </div>
+                                                            <div class="flex-grow-1 ms-2">
+                                                                <h5 class="my-0">Jerry Geiger</h5>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>P-Office</td>
+                                                <td>Aplikasi</td>
+                                                <td>25 Juli 2024 - 15:11</td>
+                                                <td class="text-primary">Assign to me</td>
+                                                <td>
+                                                    <a href="javascript:void(0);" class="action-icon"
+                                                        data-bs-toggle="modal" data-bs-target="#ticket-detail-modal">
+                                                        <i class="mdi mdi-exit-to-app"></i></a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div> <!-- end card body-->
+                            </div> <!-- end card -->
                         </div><!-- end col-->
                     </div>
-                    <!-- end row-->
+                    <!-- End Table New Ticket -->
 
-                    <div class="row">
-                        <div class="col-md-6 col-xxl-3">
-                            <!-- project card -->
-                            <div class="card d-block">
+                    <!-- Start Table Progress Ticket -->
+                    <div class="row mb-3">
+                        <div class="col-12">
+                            <div class="card">
                                 <div class="card-body">
-                                    <div class="dropdown card-widgets">
-                                        <a href="#" class="dropdown-toggle arrow-none" data-bs-toggle="dropdown"
-                                            aria-expanded="false">
-                                            <i class="ri-more-fill"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-end">
-                                            <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item"><i
-                                                    class="mdi mdi-pencil me-1"></i>Edit</a>
-                                            <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item"><i
-                                                    class="mdi mdi-delete me-1"></i>Delete</a>
-                                            <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item"><i
-                                                    class="mdi mdi-email-outline me-1"></i>Invite</a>
-                                            <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item"><i
-                                                    class="mdi mdi-exit-to-app me-1"></i>Leave</a>
-                                        </div>
-                                    </div>
-                                    <!-- project title-->
-                                    <h4 class="mt-0">
-                                        <a href="apps-projects-details.html" class="text-title">App design and
-                                            development</a>
-                                    </h4>
-                                    <div class="badge bg-success">Finished</div>
+                                    <h4 class="header-title mb-3">Progress Tickets</h4>
 
-                                    <p class="text-muted font-13 my-3">With supporting text below as a natural lead-in
-                                        to additional contenposuere erat a ante...<a href="javascript:void(0);"
-                                            class="fw-bold text-muted">view more</a>
-                                    </p>
+                                    <table id="basic-datatable-2" class="table dt-responsive nowrap w-100">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th>No. ID</th>
+                                                <th>Status</th>
+                                                <th>Location</th>
+                                                <th>User</th>
+                                                <th>Issue</th>
+                                                <th>Type</th>
+                                                <th>Date</th>
+                                                <th>PIC</th>
+                                                <th>Support Level</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
 
-                                    <!-- project detail-->
-                                    <p class="mb-1">
-                                        <span class="pe-2 text-nowrap mb-2 d-inline-block">
-                                            <i class="mdi mdi-format-list-bulleted-type text-muted"></i>
-                                            <b>21</b> Tasks
-                                        </span>
-                                        <span class="text-nowrap mb-2 d-inline-block">
-                                            <i class="mdi mdi-comment-multiple-outline text-muted"></i>
-                                            <b>741</b> Comments
-                                        </span>
-                                    </p>
-                                    <div id="tooltip-container">
-                                        <a href="javascript:void(0);" data-bs-container="#tooltip-container"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Mat Helme"
-                                            class="d-inline-block">
-                                            <img src="assets/images/users/avatar-6.jpg" class="rounded-circle avatar-xs"
-                                                alt="friend">
-                                        </a>
+                                        <tbody>
+                                            <tr>
+                                                <td>#ID-206</td>
+                                                <td>
+                                                    <div class="btn btn-sm text-light rounded-pill"
+                                                        style="background-color: #ff7a00;">
+                                                        In Progress
+                                                    </div>
+                                                </td>
+                                                <td>KP</td>
+                                                <td>
+                                                    <div class="d-flex">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex-shrink-0">
+                                                                <img src="assets/images/users/avatar-10.jpg"
+                                                                    class="rounded-circle avatar-xs" alt="friend">
+                                                            </div>
+                                                            <div class="flex-grow-1 ms-2">
+                                                                <h5 class="my-0">Donna Lynch</h5>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>P-Office</td>
+                                                <td>Aplikasi</td>
+                                                <td>20 Juni 2024 - 16:14</td>
+                                                <td class="text-primary">Kuncoro W.</td>
+                                                <td class="text-primary">Kuncoro W.</td>
+                                                <td>
+                                                    <a href="javascript:void(0);" class="action-icon"
+                                                        data-bs-toggle="modal" data-bs-target="#ticket-detail-modal">
+                                                        <i class="mdi mdi-exit-to-app"></i></a>
+                                                </td>
+                                            </tr>
 
-                                        <a href="javascript:void(0);" data-bs-container="#tooltip-container"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Michael Zenaty"
-                                            class="d-inline-block">
-                                            <img src="assets/images/users/avatar-7.jpg" class="rounded-circle avatar-xs"
-                                                alt="friend">
-                                        </a>
+                                            <tr>
+                                                <td>#ID-207</td>
+                                                <td>
+                                                    <div class="btn btn-sm text-light rounded-pill"
+                                                        style="background-color: #0acf97;">
+                                                        Done
+                                                    </div>
+                                                </td>
+                                                <td>KP</td>
+                                                <td>
+                                                    <div class="d-flex">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex-shrink-0">
+                                                                <img src="assets/images/users/avatar-9.jpg"
+                                                                    class="rounded-circle avatar-xs" alt="friend">
+                                                            </div>
+                                                            <div class="flex-grow-1 ms-2">
+                                                                <h5 class="my-0">Clint Percival</h5>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>I-Vendor</td>
+                                                <td>Aplikasi</td>
+                                                <td>20 Juni 2024 - 18:10</td>
+                                                <td class="text-primary">Sony W.</td>
+                                                <td class="text-primary">Sony W.</td>
+                                                <td>
+                                                    <a href="javascript:void(0);" class="action-icon"
+                                                        data-bs-toggle="modal" data-bs-target="#ticket-detail-modal">
+                                                        <i class="mdi mdi-exit-to-app"></i></a>
+                                                </td>
+                                            </tr>
 
-                                        <a href="javascript:void(0);" data-bs-container="#tooltip-container"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" title="James Anderson"
-                                            class="d-inline-block">
-                                            <img src="assets/images/users/avatar-8.jpg" class="rounded-circle avatar-xs"
-                                                alt="friend">
-                                        </a>
-                                        <a href="javascript:void(0);" class="d-inline-block text-muted fw-bold ms-2">
-                                            +7 more
-                                        </a>
-                                    </div>
-                                </div> <!-- end card-body-->
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item p-3">
-                                        <!-- project progress-->
-                                        <p class="mb-2 fw-bold">Progress <span class="float-end">100%</span></p>
-                                        <div class="progress progress-sm">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="100"
-                                                aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
-                                            </div><!-- /.progress-bar -->
-                                        </div><!-- /.progress -->
-                                    </li>
-                                </ul>
-                            </div> <!-- end card-->
-                        </div> <!-- end col -->
+                                            <tr>
+                                                <td>#ID-208</td>
+                                                <td>
+                                                    <div class="btn btn-sm text-light rounded-pill"
+                                                        style="background-color: #0acf97;">
+                                                        Done
+                                                    </div>
+                                                </td>
+                                                <td>KP</td>
+                                                <td>
+                                                    <div class="d-flex">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex-shrink-0">
+                                                                <img src="assets/images/users/avatar-8.jpg"
+                                                                    class="rounded-circle avatar-xs" alt="friend">
+                                                            </div>
+                                                            <div class="flex-grow-1 ms-2">
+                                                                <h5 class="my-0">Jamie Romero</h5>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>I-Vendor</td>
+                                                <td>Aplikasi</td>
+                                                <td>21 Juni 2024 - 10:23</td>
+                                                <td class="text-primary">Ugik</td>
+                                                <td class="text-primary">Ugik</td>
+                                                <td>
+                                                    <a href="javascript:void(0);" class="action-icon"
+                                                        data-bs-toggle="modal" data-bs-target="#ticket-detail-modal">
+                                                        <i class="mdi mdi-exit-to-app"></i></a>
+                                                </td>
+                                            </tr>
 
-                        <div class="col-md-6 col-xxl-3">
-                            <!-- project card -->
-                            <div class="card d-block">
-                                <div class="card-body">
-                                    <div class="dropdown card-widgets">
-                                        <a href="#" class="dropdown-toggle arrow-none" data-bs-toggle="dropdown"
-                                            aria-expanded="false">
-                                            <i class="ri-more-fill"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-end">
-                                            <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item"><i
-                                                    class="mdi mdi-pencil me-1"></i>Edit</a>
-                                            <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item"><i
-                                                    class="mdi mdi-delete me-1"></i>Delete</a>
-                                            <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item"><i
-                                                    class="mdi mdi-email-outline me-1"></i>Invite</a>
-                                            <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item"><i
-                                                    class="mdi mdi-exit-to-app me-1"></i>Leave</a>
-                                        </div>
-                                    </div>
-                                    <!-- project title-->
-                                    <h4 class="mt-0">
-                                        <a href="apps-projects-details.html" class="text-title">Coffee detail page -
-                                            Main Page</a>
-                                    </h4>
-                                    <div class="badge bg-secondary text-light">Ongoing</div>
+                                            <tr>
+                                                <td>#ID-209</td>
+                                                <td>
+                                                    <div class="btn btn-sm text-light rounded-pill"
+                                                        style="background-color: #ff7a00;">
+                                                        In Progress
+                                                    </div>
+                                                </td>
+                                                <td>KP</td>
+                                                <td>
+                                                    <div class="d-flex">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex-shrink-0">
+                                                                <img src="assets/images/users/avatar-7.jpg"
+                                                                    class="rounded-circle avatar-xs" alt="friend">
+                                                            </div>
+                                                            <div class="flex-grow-1 ms-2">
+                                                                <h5 class="my-0">John Clune</h5>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>P-Office</td>
+                                                <td>Aplikasi</td>
+                                                <td>22 Juni 2024 - 06:34</td>
+                                                <td class="text-primary">Riza F.</td>
+                                                <td class="text-primary">Riza F.</td>
+                                                <td>
+                                                    <a href="javascript:void(0);" class="action-icon"
+                                                        data-bs-toggle="modal" data-bs-target="#ticket-detail-modal">
+                                                        <i class="mdi mdi-exit-to-app"></i></a>
+                                                </td>
+                                            </tr>
 
-                                    <p class="text-muted font-13 my-3">This card has supporting text below as a natural
-                                        lead-in to additional content is a little bit longer...<a
-                                            href="javascript:void(0);" class="fw-bold text-muted">view more</a>
-                                    </p>
+                                            <tr>
+                                                <td>#ID-210</td>
+                                                <td>
+                                                    <div class="btn btn-sm text-light rounded-pill"
+                                                        style="background-color: #ff7a00;">
+                                                        In Progress
+                                                    </div>
+                                                </td>
+                                                <td>KP</td>
+                                                <td>
+                                                    <div class="d-flex">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex-shrink-0">
+                                                                <img src="assets/images/users/avatar-6.jpg"
+                                                                    class="rounded-circle avatar-xs" alt="friend">
+                                                            </div>
+                                                            <div class="flex-grow-1 ms-2">
+                                                                <h5 class="my-0">Joshua Moody</h5>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>P-Office</td>
+                                                <td>Aplikasi</td>
+                                                <td>22 Juli 2024 - 11:24</td>
+                                                <td class="text-primary">Riza F.</td>
+                                                <td class="text-primary">Riza F.</td>
+                                                <td>
+                                                    <a href="javascript:void(0);" class="action-icon"
+                                                        data-bs-toggle="modal" data-bs-target="#ticket-detail-modal">
+                                                        <i class="mdi mdi-exit-to-app"></i></a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
 
-                                    <!-- project detail-->
-                                    <p class="mb-1">
-                                        <span class="pe-2 text-nowrap mb-2 d-inline-block">
-                                            <i class="mdi mdi-format-list-bulleted-type text-muted"></i>
-                                            <b>81</b> Tasks
-                                        </span>
-                                        <span class="text-nowrap mb-2 d-inline-block">
-                                            <i class="mdi mdi-comment-multiple-outline text-muted"></i>
-                                            <b>103</b> Comments
-                                        </span>
-                                    </p>
-                                    <div id="tooltip-container1">
-                                        <a href="javascript:void(0);" data-bs-container="#tooltip-container1"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Mat Helme"
-                                            class="d-inline-block">
-                                            <img src="assets/images/users/avatar-1.jpg" class="rounded-circle avatar-xs"
-                                                alt="friend">
-                                        </a>
-
-                                        <a href="javascript:void(0);" data-bs-container="#tooltip-container1"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Michael Zenaty"
-                                            class="d-inline-block">
-                                            <img src="assets/images/users/avatar-2.jpg" class="rounded-circle avatar-xs"
-                                                alt="friend">
-                                        </a>
-
-                                        <a href="javascript:void(0);" data-bs-container="#tooltip-container1"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" title="James Anderson"
-                                            class="d-inline-block">
-                                            <img src="assets/images/users/avatar-3.jpg" class="rounded-circle avatar-xs"
-                                                alt="friend">
-                                        </a>
-                                        <a href="javascript:void(0);" class="d-inline-block text-muted fw-bold ms-2">
-                                            +3 more
-                                        </a>
-                                    </div>
-                                </div> <!-- end card-body-->
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item p-3">
-                                        <!-- project progress-->
-                                        <p class="mb-2 fw-bold">Progress <span class="float-end">28%</span></p>
-                                        <div class="progress progress-sm">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="28"
-                                                aria-valuemin="0" aria-valuemax="100" style="width: 28%;">
-                                            </div><!-- /.progress-bar -->
-                                        </div><!-- /.progress -->
-                                    </li>
-                                </ul>
-                            </div> <!-- end card-->
-                        </div> <!-- end col -->
-                        <div class="col-md-6 col-xxl-3">
-                            <!-- project card -->
-                            <div class="card d-block">
-                                <div class="card-body">
-                                    <div class="dropdown card-widgets">
-                                        <a href="#" class="dropdown-toggle arrow-none" data-bs-toggle="dropdown"
-                                            aria-expanded="false">
-                                            <i class="ri-more-fill"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-end">
-                                            <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item"><i
-                                                    class="mdi mdi-pencil me-1"></i>Edit</a>
-                                            <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item"><i
-                                                    class="mdi mdi-delete me-1"></i>Delete</a>
-                                            <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item"><i
-                                                    class="mdi mdi-email-outline me-1"></i>Invite</a>
-                                            <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item"><i
-                                                    class="mdi mdi-exit-to-app me-1"></i>Leave</a>
-                                        </div>
-                                    </div>
-                                    <!-- project title-->
-                                    <h4 class="mt-0">
-                                        <a href="apps-projects-details.html" class="text-title">Poster illustation
-                                            design</a>
-                                    </h4>
-                                    <div class="badge bg-secondary text-light">Ongoing</div>
-
-                                    <p class="text-muted font-13 my-3">Anim pariatur cliche reprehenderit, enim eiusmod
-                                        high life accusamus terry richardson ad squid...<a href="javascript:void(0);"
-                                            class="fw-bold text-muted">view more</a>
-                                    </p>
-
-                                    <!-- project detail-->
-                                    <p class="mb-1">
-                                        <span class="pe-2 text-nowrap mb-2 d-inline-block">
-                                            <i class="mdi mdi-format-list-bulleted-type text-muted"></i>
-                                            <b>12</b> Tasks
-                                        </span>
-                                        <span class="text-nowrap mb-2 d-inline-block">
-                                            <i class="mdi mdi-comment-multiple-outline text-muted"></i>
-                                            <b>482</b> Comments
-                                        </span>
-                                    </p>
-                                    <div id="tooltip-container2">
-                                        <a href="javascript:void(0);" data-bs-container="#tooltip-container2"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Mat Helme"
-                                            class="d-inline-block">
-                                            <img src="assets/images/users/avatar-4.jpg" class="rounded-circle avatar-xs"
-                                                alt="friend">
-                                        </a>
-
-                                        <a href="javascript:void(0);" data-bs-container="#tooltip-container2"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Michael Zenaty"
-                                            class="d-inline-block">
-                                            <img src="assets/images/users/avatar-5.jpg" class="rounded-circle avatar-xs"
-                                                alt="friend">
-                                        </a>
-                                    </div>
-                                </div> <!-- end card-body-->
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item p-3">
-                                        <!-- project progress-->
-                                        <p class="mb-2 fw-bold">Progress <span class="float-end">63%</span></p>
-                                        <div class="progress progress-sm">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="63"
-                                                aria-valuemin="0" aria-valuemax="100" style="width: 63%;">
-                                            </div><!-- /.progress-bar -->
-                                        </div><!-- /.progress -->
-                                    </li>
-                                </ul>
-                            </div> <!-- end card-->
-                        </div> <!-- end col -->
-
-                        <div class="col-md-6 col-xxl-3">
-                            <!-- project card -->
-                            <div class="card d-block">
-                                <div class="card-body">
-                                    <div class="dropdown card-widgets">
-                                        <a href="#" class="dropdown-toggle arrow-none" data-bs-toggle="dropdown"
-                                            aria-expanded="false">
-                                            <i class="ri-more-fill"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-end">
-                                            <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item"><i
-                                                    class="mdi mdi-pencil me-1"></i>Edit</a>
-                                            <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item"><i
-                                                    class="mdi mdi-delete me-1"></i>Delete</a>
-                                            <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item"><i
-                                                    class="mdi mdi-email-outline me-1"></i>Invite</a>
-                                            <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item"><i
-                                                    class="mdi mdi-exit-to-app me-1"></i>Leave</a>
-                                        </div>
-                                    </div>
-                                    <!-- project title-->
-                                    <h4 class="mt-0">
-                                        <a href="apps-projects-details.html" class="text-title">Drinking bottle graphics
-                                        </a>
-                                    </h4>
-                                    <div class="badge bg-success">Finished</div>
-
-                                    <p class="text-muted font-13 my-3">Some quick example text to build on the card
-                                        title and make up the bulk of the card's content...<a href="javascript:void(0);"
-                                            class="fw-bold text-muted">view more</a>
-                                    </p>
-
-                                    <!-- project detail-->
-                                    <p class="mb-1">
-                                        <span class="pe-2 mb-2 d-inline-block text-nowrap">
-                                            <i class="mdi mdi-format-list-bulleted-type text-muted"></i>
-                                            <b>50</b> Tasks
-                                        </span>
-                                        <span class="text-nowrap mb-2 d-inline-block">
-                                            <i class="mdi mdi-comment-multiple-outline text-muted"></i>
-                                            <b>208</b> Comments
-                                        </span>
-                                    </p>
-                                    <div id="tooltip-container3">
-                                        <a href="javascript:void(0);" data-bs-container="#tooltip-container3"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Mat Helme"
-                                            class="d-inline-block">
-                                            <img src="assets/images/users/avatar-10.jpg"
-                                                class="rounded-circle avatar-xs" alt="friend">
-                                        </a>
-
-                                        <a href="javascript:void(0);" data-bs-container="#tooltip-container3"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Michael Zenaty"
-                                            class="d-inline-block">
-                                            <img src="assets/images/users/avatar-5.jpg" class="rounded-circle avatar-xs"
-                                                alt="friend">
-                                        </a>
-
-                                        <a href="javascript:void(0);" data-bs-container="#tooltip-container3"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" title="James Anderson"
-                                            class="d-inline-block">
-                                            <img src="assets/images/users/avatar-6.jpg" class="rounded-circle avatar-xs"
-                                                alt="friend">
-                                        </a>
-                                        <a href="javascript:void(0);" class="d-inline-block text-muted fw-bold ms-2">
-                                            +2 more
-                                        </a>
-                                    </div>
-                                </div> <!-- end card-body-->
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item p-3">
-                                        <!-- project progress-->
-                                        <p class="mb-2 fw-bold">Progress <span class="float-end">100%</span></p>
-                                        <div class="progress progress-sm">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="100"
-                                                aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
-                                            </div><!-- /.progress-bar -->
-                                        </div><!-- /.progress -->
-                                    </li>
-                                </ul>
-                            </div> <!-- end card-->
-                        </div> <!-- end col -->
+                                </div> <!-- end card body-->
+                            </div> <!-- end card -->
+                        </div><!-- end col-->
                     </div>
-                    <!-- end row-->
-
-                    <div class="row">
-                        <div class="col-md-6 col-xxl-3">
-                            <!-- project card -->
-                            <div class="card d-block">
-                                <!-- project-thumbnail -->
-                                <img class="card-img-top" src="assets/images/projects/project-1.jpg"
-                                    alt="project image cap">
-                                <div class="card-img-overlay">
-                                    <div class="badge bg-secondary text-light p-1">Ongoing</div>
-                                </div>
-
-                                <div class="card-body position-relative">
-                                    <!-- project title-->
-                                    <h4 class="mt-0">
-                                        <a href="apps-projects-details.html" class="text-title">Company logo design</a>
-                                    </h4>
-
-                                    <!-- project detail-->
-                                    <p class="mb-3">
-                                        <span class="pe-2 text-nowrap">
-                                            <i class="mdi mdi-format-list-bulleted-type"></i>
-                                            <b>3</b> Tasks
-                                        </span>
-                                        <span class="text-nowrap">
-                                            <i class="mdi mdi-comment-multiple-outline"></i>
-                                            <b>104</b> Comments
-                                        </span>
-                                    </p>
-                                    <div class="mb-3" id="tooltip-container4">
-                                        <a href="javascript:void(0);" data-bs-container="#tooltip-container4"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Mat Helme"
-                                            class="d-inline-block">
-                                            <img src="assets/images/users/avatar-3.jpg" class="rounded-circle avatar-xs"
-                                                alt="friend">
-                                        </a>
-
-                                        <a href="javascript:void(0);" data-bs-container="#tooltip-container4"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Michael Zenaty"
-                                            class="d-inline-block">
-                                            <img src="assets/images/users/avatar-5.jpg" class="rounded-circle avatar-xs"
-                                                alt="friend">
-                                        </a>
-
-                                        <a href="javascript:void(0);" data-bs-container="#tooltip-container4"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" title="James Anderson"
-                                            class="d-inline-block">
-                                            <img src="assets/images/users/avatar-9.jpg" class="rounded-circle avatar-xs"
-                                                alt="friend">
-                                        </a>
-                                    </div>
-
-                                    <!-- project progress-->
-                                    <p class="mb-2 fw-bold">Progress <span class="float-end">45%</span></p>
-                                    <div class="progress progress-sm">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="45"
-                                            aria-valuemin="0" aria-valuemax="100" style="width: 45%;">
-                                        </div><!-- /.progress-bar -->
-                                    </div><!-- /.progress -->
-                                </div> <!-- end card-body-->
-                            </div> <!-- end card-->
-                        </div> <!-- end col -->
-
-                        <div class="col-md-6 col-xxl-3">
-                            <!-- project card -->
-                            <div class="card d-block">
-                                <!-- project-thumbnail -->
-                                <img class="card-img-top" src="assets/images/projects/project-2.jpg"
-                                    alt="project image cap">
-                                <div class="card-img-overlay">
-                                    <div class="badge bg-success p-1">Finished</div>
-                                </div>
-
-                                <div class="card-body position-relative">
-                                    <!-- project title-->
-                                    <h4 class="mt-0">
-                                        <a href="apps-projects-details.html" class="text-title">Landing page design -
-                                            Home</a>
-                                    </h4>
-
-                                    <!-- project detail-->
-                                    <p class="mb-3">
-                                        <span class="pe-2 text-nowrap">
-                                            <i class="mdi mdi-format-list-bulleted-type"></i>
-                                            <b>11</b> Tasks
-                                        </span>
-                                        <span class="text-nowrap">
-                                            <i class="mdi mdi-comment-multiple-outline"></i>
-                                            <b>254</b> Comments
-                                        </span>
-                                    </p>
-                                    <div class="mb-3" id="tooltip-container5">
-                                        <a href="javascript:void(0);" data-bs-container="#tooltip-container5"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Mat Helme"
-                                            class="d-inline-block">
-                                            <img src="assets/images/users/avatar-10.jpg"
-                                                class="rounded-circle avatar-xs" alt="friend">
-                                        </a>
-
-                                        <a href="javascript:void(0);" data-bs-container="#tooltip-container5"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Michael Zenaty"
-                                            class="d-inline-block">
-                                            <img src="assets/images/users/avatar-5.jpg" class="rounded-circle avatar-xs"
-                                                alt="friend">
-                                        </a>
-
-                                        <a href="javascript:void(0);" data-bs-container="#tooltip-container5"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" title="James Anderson"
-                                            class="d-inline-block">
-                                            <img src="assets/images/users/avatar-7.jpg" class="rounded-circle avatar-xs"
-                                                alt="friend">
-                                        </a>
-                                        <a href="javascript:void(0);" class="d-inline-block text-muted fw-bold ms-2">
-                                            +2 more
-                                        </a>
-                                    </div>
-
-                                    <!-- project progress-->
-                                    <p class="mb-2 fw-bold">Progress <span class="float-end">100%</span></p>
-                                    <div class="progress progress-sm">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="100"
-                                            aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
-                                        </div><!-- /.progress-bar -->
-                                    </div><!-- /.progress -->
-                                </div> <!-- end card-body-->
-                            </div> <!-- end card-->
-                        </div> <!-- end col -->
-
-                        <div class="col-md-6 col-xxl-3">
-                            <!-- project card -->
-                            <div class="card d-block">
-                                <!-- project-thumbnail -->
-                                <img class="card-img-top" src="assets/images/projects/project-3.jpg"
-                                    alt="project image cap">
-                                <div class="card-img-overlay">
-                                    <div class="badge bg-secondary text-light p-1">Ongoing</div>
-                                </div>
-
-                                <div class="card-body position-relative">
-                                    <!-- project title-->
-                                    <h4 class="mt-0">
-                                        <a href="apps-projects-details.html" class="text-title">Product page
-                                            redesign</a>
-                                    </h4>
-
-                                    <!-- project detail-->
-                                    <p class="mb-3">
-                                        <span class="pe-2 text-nowrap">
-                                            <i class="mdi mdi-format-list-bulleted-type"></i>
-                                            <b>21</b> Tasks
-                                        </span>
-                                        <span class="text-nowrap">
-                                            <i class="mdi mdi-comment-multiple-outline"></i>
-                                            <b>668</b> Comments
-                                        </span>
-                                    </p>
-                                    <div class="mb-3" id="tooltip-container6">
-                                        <a href="javascript:void(0);" data-bs-container="#tooltip-container6"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Mat Helme"
-                                            class="d-inline-block">
-                                            <img src="assets/images/users/avatar-6.jpg" class="rounded-circle avatar-xs"
-                                                alt="friend">
-                                        </a>
-
-                                        <a href="javascript:void(0);" data-bs-container="#tooltip-container6"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Michael Zenaty"
-                                            class="d-inline-block">
-                                            <img src="assets/images/users/avatar-7.jpg" class="rounded-circle avatar-xs"
-                                                alt="friend">
-                                        </a>
-
-                                        <a href="javascript:void(0);" data-bs-container="#tooltip-container6"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" title="James Anderson"
-                                            class="d-inline-block">
-                                            <img src="assets/images/users/avatar-8.jpg" class="rounded-circle avatar-xs"
-                                                alt="friend">
-                                        </a>
-                                        <a href="javascript:void(0);" class="d-inline-block text-muted fw-bold ms-2">
-                                            +5 more
-                                        </a>
-                                    </div>
-
-                                    <!-- project progress-->
-                                    <p class="mb-2 fw-bold">Progress <span class="float-end">71%</span></p>
-                                    <div class="progress progress-sm">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="71"
-                                            aria-valuemin="0" aria-valuemax="100" style="width: 71%;">
-                                        </div><!-- /.progress-bar -->
-                                    </div><!-- /.progress -->
-                                </div> <!-- end card-body-->
-                            </div> <!-- end card-->
-                        </div> <!-- end col -->
-
-                        <div class="col-md-6 col-xxl-3">
-                            <!-- project card -->
-                            <div class="card d-block">
-                                <!-- project-thumbnail -->
-                                <img class="card-img-top" src="assets/images/projects/project-4.jpg"
-                                    alt="project image cap">
-                                <div class="card-img-overlay">
-                                    <div class="badge bg-secondary text-light p-1">Ongoing</div>
-                                </div>
-
-                                <div class="card-body position-relative">
-                                    <!-- project title-->
-                                    <h4 class="mt-0">
-                                        <a href="apps-projects-details.html" class="text-title">Coffee detail page -
-                                            Main Page</a>
-                                    </h4>
-
-                                    <!-- project detail-->
-                                    <p class="mb-3">
-                                        <span class="pe-2 text-nowrap">
-                                            <i class="mdi mdi-format-list-bulleted-type"></i>
-                                            <b>18</b> Tasks
-                                        </span>
-                                        <span class="text-nowrap">
-                                            <i class="mdi mdi-comment-multiple-outline"></i>
-                                            <b>259</b> Comments
-                                        </span>
-                                    </p>
-                                    <div class="mb-3" id="tooltip-container7">
-                                        <a href="javascript:void(0);" data-bs-container="#tooltip-container7"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Mat Helme"
-                                            class="d-inline-block">
-                                            <img src="assets/images/users/avatar-2.jpg" class="rounded-circle avatar-xs"
-                                                alt="friend">
-                                        </a>
-
-                                        <a href="javascript:void(0);" data-bs-container="#tooltip-container7"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Michael Zenaty"
-                                            class="d-inline-block">
-                                            <img src="assets/images/users/avatar-3.jpg" class="rounded-circle avatar-xs"
-                                                alt="friend">
-                                        </a>
-                                    </div>
-
-                                    <!-- project progress-->
-                                    <p class="mb-2 fw-bold">Progress <span class="float-end">52%</span></p>
-                                    <div class="progress progress-sm">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="52"
-                                            aria-valuemin="0" aria-valuemax="100" style="width: 52%;">
-                                        </div><!-- /.progress-bar -->
-                                    </div><!-- /.progress -->
-                                </div> <!-- end card-body-->
-                            </div> <!-- end card-->
-                        </div> <!-- end col -->
-                    </div>
-                    <!-- end row-->
+                    <!-- End Table Progress Ticket -->
 
                 </div> <!-- container -->
 
@@ -1205,6 +1058,334 @@
 
     </div>
     <!-- END wrapper -->
+
+    <!-- Ticket Detail Modal Start -->
+    <div id="ticket-detail-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="ticketDetailLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-full-width modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="ticketDetailLabel">
+                        Ticket ID : #ID-205
+                    </h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="row">
+
+                        <!-- Left Column -->
+                        <div class="col-xxl-8 col-lg-6">
+
+                            <!-- Ticket card -->
+                            <div class="card d-block">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <div>
+                                            <h3>Aplikasi</h3>
+                                            <h4>P-Office</h4>
+                                        </div>
+
+                                        <!-- Button in progress -->
+                                        <!-- <div>
+                                            <div class="btn rounded-pill text-light" style="background-color: #727cf5;">
+                                                Open
+                                            </div>
+                                        </div> -->
+
+                                        <!-- Button in progress -->
+                                        <div>
+                                            <div class="btn rounded-pill text-light" style="background-color: #ff7a00;">
+                                                In Progress
+                                            </div>
+                                        </div>
+
+                                        <!-- Button in progress -->
+                                        <!-- <div>
+                                            <div class="btn rounded-pill text-light" style="background-color: #0acf97;">
+                                                Done
+                                            </div>
+                                        </div> -->
+                                    </div>
+
+                                    <h5>Description:</h5>
+
+                                    <p class="text-muted mb-3">
+                                        With supporting text below as a natural lead-in to additional contenposuere erat
+                                        a ante. Voluptates, illo, iste itaque voluptas
+                                        corrupti ratione reprehenderit magni similique? Tempore, quos delectus
+                                        asperiores libero voluptas quod perferendis! Voluptate,
+                                        quod illo rerum? Lorem ipsum dolor sit amet.
+                                    </p>
+
+                                    <div class="row">
+
+                                        <div class="col-6 col-md-4">
+                                            <div class="mb-4">
+                                                <p class="mt-2 mb-1 text-muted fw-bold font-12 text-uppercase">
+                                                    Request Date
+                                                </p>
+                                                <div class="d-flex">
+                                                    <i class='uil uil-schedule font-18 text-success me-1'></i>
+                                                    <div>
+                                                        <h5 class="mt-1 font-14">
+                                                            17 March 2018 - 20:13
+                                                        </h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-6 col-md-4">
+                                            <div class="mb-4">
+                                                <p class="mt-2 mb-1 text-muted fw-bold font-12 text-uppercase">
+                                                    Start Date
+                                                </p>
+                                                <div class="d-flex">
+                                                    <i class='uil uil-schedule font-18 text-success me-1'></i>
+                                                    <div>
+                                                        <h5 class="mt-1 font-14">
+                                                            19 March 2018 - 16:33
+                                                        </h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-6 col-md-4">
+                                            <div class="mb-4">
+                                                <p class="mt-2 mb-1 text-muted fw-bold font-12 text-uppercase">
+                                                    End Date
+                                                </p>
+                                                <div class="d-flex">
+                                                    <i class='uil uil-schedule font-18 text-success me-1'></i>
+                                                    <div>
+                                                        <h5 class="mt-1 font-14">
+                                                            -
+                                                        </h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row">
+
+                                        <!-- PIC -->
+                                        <div id="tooltip-container" class="col-6 col-md-4">
+                                            <h5>PIC :</h5>
+                                            <a href="javascript:void(0);" data-bs-container="#tooltip-container"
+                                                data-bs-toggle="tooltip" data-bs-placement="top" title="Mat Helme"
+                                                class="d-inline-block">
+                                                <img src="assets/images/users/avatar-8.jpg"
+                                                    class="rounded-circle img-thumbnail avatar-sm" alt="friend">
+                                            </a>
+                                        </div>
+
+                                        <!-- Support Level -->
+                                        <div id="tooltip-container" class="col-6 col-md-4">
+                                            <h5>Support Level :</h5>
+
+                                            <!-- Image support level -->
+                                            <!-- <a href="javascript:void(0);" data-bs-container="#tooltip-container"
+                                                data-bs-toggle="tooltip" data-bs-placement="top" title="Jane S"
+                                                class="d-inline-block">
+                                                <img src="assets/images/users/avatar-9.jpg"
+                                                    class="rounded-circle img-thumbnail avatar-sm" alt="friend">
+                                            </a> -->
+
+                                            <!-- Add support level -->
+                                            <a href="javascript:void(0);" data-bs-container="#tooltip-container"
+                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                title="Add Support Level" class="d-inline-block">
+                                                <img src="assets/images/users/user-blank.jpg"
+                                                    class="rounded-circle img-thumbnail avatar-sm" alt="friend">
+                                            </a>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Button status in progress -->
+                                    <div class="row row-cols-2 mt-3 mt-md-4">
+                                        <div>
+                                            <button type="submit" class="btn btn-outline-success w-100">
+                                                Chat Bot
+                                            </button>
+                                        </div>
+                                        <div>
+                                            <button type="submit" class="btn btn-success w-100">
+                                                Complete
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Button status open -->
+                                    <!-- <div class="row mt-3 mt-md-4">
+                                        <div class="col">
+                                            <button type="submit" class="btn text-light w-100"
+                                                style="background-color: #ff7a00;">
+                                                Process this ticket
+                                            </button>
+                                        </div>
+                                    </div> -->
+
+                                </div> <!-- end card-body-->
+                            </div> <!-- end card-->
+                        </div> <!-- end col -->
+
+                        <!-- Right Column -->
+                        <div class="col-lg-6 col-xxl-4">
+
+                            <!-- Attachments -->
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title mb-3">Attachments</h5>
+
+                                    <form action="/" method="post" class="dropzone" id="myAwesomeDropzone"
+                                        data-plugin="dropzone" data-previews-container="#file-previews"
+                                        data-upload-preview-template="#uploadPreviewTemplate">
+                                        <div class="fallback">
+                                            <input name="file" type="file" />
+                                        </div>
+
+                                        <div class="dz-message needsclick">
+                                            <i class="h3 text-muted ri-upload-cloud-2-line"></i>
+                                            <h5 class="mb-1">Drop files here or click to upload.</h5>
+                                            <span class="text-muted font-13 mt-0">Maximum size
+                                                <strong>3MB</strong></span>
+                                        </div>
+                                    </form>
+
+                                    <!-- Preview -->
+                                    <div class="dropzone-previews mt-3" id="file-previews"></div>
+
+                                    <!-- file preview template -->
+                                    <div class="d-none" id="uploadPreviewTemplate">
+                                        <div class="card mt-1 mb-0 shadow-none border">
+                                            <div class="p-2">
+                                                <div class="row align-items-center">
+                                                    <div class="col-auto">
+                                                        <img data-dz-thumbnail src="#"
+                                                            class="avatar-sm rounded bg-light" alt="">
+                                                    </div>
+                                                    <div class="col ps-0">
+                                                        <a href="javascript:void(0);" class="text-muted fw-bold"
+                                                            data-dz-name></a>
+                                                        <p class="mb-0" data-dz-size></p>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <!-- Button -->
+                                                        <a href="" class="btn btn-link btn-lg text-muted"
+                                                            data-dz-remove>
+                                                            <i class="ri-close-line"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end file preview template -->
+
+
+                                    <div class="card my-1 shadow-none border">
+                                        <div class="p-2">
+                                            <div class="row align-items-center">
+                                                <div class="col-auto">
+                                                    <div class="avatar-sm">
+                                                        <span class="avatar-title rounded">
+                                                            .ZIP
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="col ps-0">
+                                                    <a href="javascript:void(0);"
+                                                        class="text-muted fw-bold">Hyper-admin-design.zip</a>
+                                                    <p class="mb-0">2.3 MB</p>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <!-- Button -->
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-link btn-lg text-muted">
+                                                        <i class="ri-download-2-line"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card mb-1 shadow-none border">
+                                        <div class="p-2">
+                                            <div class="row align-items-center">
+                                                <div class="col-auto">
+                                                    <img src="assets/images/projects/project-1.jpg"
+                                                        class="avatar-sm rounded" alt="file-image" />
+                                                </div>
+                                                <div class="col ps-0">
+                                                    <a href="javascript:void(0);"
+                                                        class="text-muted fw-bold">Dashboard-design.jpg</a>
+                                                    <p class="mb-0">3.25 MB</p>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <!-- Button -->
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-link btn-lg text-muted">
+                                                        <i class="ri-download-2-line"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card mb-0 shadow-none border">
+                                        <div class="p-2">
+                                            <div class="row align-items-center">
+                                                <div class="col-auto">
+                                                    <div class="avatar-sm">
+                                                        <span class="avatar-title bg-secondary text-light rounded">
+                                                            .MP4
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="col ps-0">
+                                                    <a href="javascript:void(0);"
+                                                        class="text-muted fw-bold">Admin-bug-report.mp4</a>
+                                                    <p class="mb-0">7.05 MB</p>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <!-- Button -->
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-link btn-lg text-muted">
+                                                        <i class="ri-download-2-line"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- Survey -->
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title mb-3">Feedback</h5>
+
+                                    <h4>
+                                        Good job!
+                                    </h4>
+                                </div>
+                            </div>
+
+                        </div><!-- end col -->
+                    </div>
+
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div>
+    <!-- Ticket Detail Modal End -->
 
     <!-- Theme Settings -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="theme-settings-offcanvas">
@@ -1991,6 +2172,35 @@
 
     <!-- Vendor js -->
     <script src="assets/js/vendor.min.js"></script>
+
+    <!-- Code Highlight js -->
+    <script src="assets/vendor/highlightjs/highlight.pack.min.js"></script>
+    <script src="assets/vendor/clipboard/clipboard.min.js"></script>
+    <script src="assets/js/hyper-syntax.js"></script>
+
+    <!-- Dropzone File Upload js -->
+    <script src="assets/vendor/dropzone/min/dropzone.min.js"></script>
+
+    <!-- File Upload Demo js -->
+    <script src="assets/js/ui/component.fileupload.js"></script>
+
+    <!-- Datatables js -->
+    <script src="assets/vendor/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="assets/vendor/datatables.net-bs5/js/dataTables.bootstrap5.min.js"></script>
+    <script src="assets/vendor/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="assets/vendor/datatables.net-responsive-bs5/js/responsive.bootstrap5.min.js"></script>
+    <script src="assets/vendor/datatables.net-fixedcolumns-bs5/js/fixedColumns.bootstrap5.min.js"></script>
+    <script src="assets/vendor/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+    <script src="assets/vendor/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="assets/vendor/datatables.net-buttons-bs5/js/buttons.bootstrap5.min.js"></script>
+    <script src="assets/vendor/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="assets/vendor/datatables.net-buttons/js/buttons.flash.min.js"></script>
+    <script src="assets/vendor/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="assets/vendor/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+    <script src="assets/vendor/datatables.net-select/js/dataTables.select.min.js"></script>
+
+    <!-- Datatable Demo Aapp js -->
+    <script src="assets/js/pages/demo.datatable-init.js"></script>
 
     <!-- App js -->
     <script src="assets/js/app.min.js"></script>

@@ -3,10 +3,9 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Projects | Project Management</title>
+    <title>Ticketing Dashboard | Project Management</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="" name="description" />
-    <meta content="Coderthemes" name="author" />
+    <meta content="" name="" />
 
     <!-- App favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.ico">
@@ -540,638 +539,243 @@
                 <!-- Start Content-->
                 <div class="container-fluid">
 
-                    <!-- start page title -->
+                    <!-- Start page title -->
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box">
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="javascript: void(0);">Main Plan</a></li>
-                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Projects</a></li>
-                                        <li class="breadcrumb-item active">Projects List</li>
+                                        <li class="breadcrumb-item active">Dashboard Ticketing</li>
                                     </ol>
                                 </div>
-                                <h4 class="page-title">Projects List</h4>
+                                <h4 class="page-title">Dashboard Ticketing</h4>
                             </div>
                         </div>
                     </div>
-                    <!-- end page title -->
+                    <!-- End page title -->
 
-                    <div class="row mb-2">
-                        <div class="col-sm-4">
-                            <a href="apps-projects-add.html" class="btn btn-danger rounded-pill mb-3"><i
-                                    class="mdi mdi-plus"></i> Create Project</a>
-                        </div>
-                        <div class="col-sm-8">
-                            <div class="text-sm-end">
-                                <div class="btn-group mb-3">
-                                    <button type="button" class="btn btn-primary">All</button>
-                                </div>
-                                <div class="btn-group mb-3 ms-1">
-                                    <button type="button" class="btn btn-light">Ongoing</button>
-                                    <button type="button" class="btn btn-light">Finished</button>
-                                </div>
-                                <div class="btn-group mb-3 ms-2 d-none d-sm-inline-block">
-                                    <button type="button" class="btn btn-secondary"><i
-                                            class="ri-function-line"></i></button>
-                                </div>
-                                <div class="btn-group mb-3 d-none d-sm-inline-block">
-                                    <button type="button" class="btn btn-link text-muted"><i
-                                            class="ri-list-check-2"></i></button>
+                    <!-- Start Filter -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <form
+                                        class="row row-cols-md-2 row-cols-lg-3 row-cols-xl-4 gy-2 gx-2 align-items-center">
+                                        <div>
+                                            <div class="d-flex align-items-center">
+                                                <label for="status-select" class="me-2">Status</label>
+                                                <select class="form-select" id="status-select">
+                                                    <option selected>All</option>
+                                                    <option value="1">Open</option>
+                                                    <option value="2">In Progress</option>
+                                                    <option value="3">Done</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="d-flex align-items-center">
+                                                <label for="status-select" class="me-2">Lokasi</label>
+                                                <select class="form-select" id="status-select">
+                                                    <option selected>All</option>
+                                                    <option value="1">Lokasi 1</option>
+                                                    <option value="2">Lokasi 2</option>
+                                                    <option value="3">Lokasi 3</option>
+                                                    <option value="4">Lokasi 4</option>
+                                                    <option value="5">Lokasi 5</option>
+                                                    <option value="6">Lokasi 6</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="d-flex align-items-center">
+                                                <label for="status-select" class="me-2">PIC</label>
+                                                <select class="form-select" id="status-select">
+                                                    <option selected>All</option>
+                                                    <option value="1">PIC A</option>
+                                                    <option value="2">PIC B</option>
+                                                    <option value="3">PIC C</option>
+                                                    <option value="4">PIC D</option>
+                                                    <option value="5">PIC E</option>
+                                                    <option value="6">PIC F</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <button type="button" class="btn btn-primary w-100"><i
+                                                    class="mdi mdi-filter"></i>
+                                                Submit
+                                            </button>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
-                        </div><!-- end col-->
+                        </div>
                     </div>
-                    <!-- end row-->
+                    <!-- Start Filter -->
 
+                    <!-- Start Chart -->
                     <div class="row">
-                        <div class="col-md-6 col-xxl-3">
-                            <!-- project card -->
-                            <div class="card d-block">
+                        <div class="col-12">
+                            <div class="card">
                                 <div class="card-body">
-                                    <div class="dropdown card-widgets">
-                                        <a href="#" class="dropdown-toggle arrow-none" data-bs-toggle="dropdown"
-                                            aria-expanded="false">
-                                            <i class="ri-more-fill"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-end">
-                                            <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item"><i
-                                                    class="mdi mdi-pencil me-1"></i>Edit</a>
-                                            <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item"><i
-                                                    class="mdi mdi-delete me-1"></i>Delete</a>
-                                            <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item"><i
-                                                    class="mdi mdi-email-outline me-1"></i>Invite</a>
-                                            <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item"><i
-                                                    class="mdi mdi-exit-to-app me-1"></i>Leave</a>
+                                    <div class="row">
+                                        <div class="col-xl-4">
+                                            <h4>Ticket Accumulations</h4>
+
+                                            <div id="monthly-target" class="apex-charts mb-4 mt-4"
+                                                data-colors="#727cf5,#ff7a00,#0acf97">
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    <div class="text-center">
+                                                        <h5>15</h5>
+                                                        <p class="fw-semibold text-muted mb-0">
+                                                            <i class="mdi mdi-circle" style="color: #727cf5;"></i> Open
+
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="text-center">
+                                                        <h5>38</h5>
+                                                        <p class="fw-semibold text-muted mb-0">
+                                                            <i class="mdi mdi-circle" style="color: #ff7a00"></i> In
+                                                            Progress
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="text-center">
+                                                        <h5>186</h5>
+                                                        <p class="fw-semibold text-muted mb-0">
+                                                            <i class="mdi mdi-circle text-success"></i> Done
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-8">
+                                            <div class="d-flex justify-content-between">
+                                                <h4>Ticket Monthly</h4>
+                                                <div>
+                                                    <button type="button" class="btn btn-soft-primary btn-sm">
+                                                        All
+                                                    </button>
+                                                    <button type="button" class="btn btn-soft-secondary btn-sm">
+                                                        6M
+                                                    </button>
+                                                    <button type="button" class="btn btn-soft-secondary btn-sm">
+                                                        1Y
+                                                    </button>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div dir="ltr" class="mt-3">
+                                                    <div id="crm-project-statistics" class="apex-charts"
+                                                        data-colors="#727cf5,#ff7a00,#0acf97">
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <!-- project title-->
-                                    <h4 class="mt-0">
-                                        <a href="apps-projects-details.html" class="text-title">App design and
-                                            development</a>
-                                    </h4>
-                                    <div class="badge bg-success">Finished</div>
-
-                                    <p class="text-muted font-13 my-3">With supporting text below as a natural lead-in
-                                        to additional contenposuere erat a ante...<a href="javascript:void(0);"
-                                            class="fw-bold text-muted">view more</a>
-                                    </p>
-
-                                    <!-- project detail-->
-                                    <p class="mb-1">
-                                        <span class="pe-2 text-nowrap mb-2 d-inline-block">
-                                            <i class="mdi mdi-format-list-bulleted-type text-muted"></i>
-                                            <b>21</b> Tasks
-                                        </span>
-                                        <span class="text-nowrap mb-2 d-inline-block">
-                                            <i class="mdi mdi-comment-multiple-outline text-muted"></i>
-                                            <b>741</b> Comments
-                                        </span>
-                                    </p>
-                                    <div id="tooltip-container">
-                                        <a href="javascript:void(0);" data-bs-container="#tooltip-container"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Mat Helme"
-                                            class="d-inline-block">
-                                            <img src="assets/images/users/avatar-6.jpg" class="rounded-circle avatar-xs"
-                                                alt="friend">
-                                        </a>
-
-                                        <a href="javascript:void(0);" data-bs-container="#tooltip-container"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Michael Zenaty"
-                                            class="d-inline-block">
-                                            <img src="assets/images/users/avatar-7.jpg" class="rounded-circle avatar-xs"
-                                                alt="friend">
-                                        </a>
-
-                                        <a href="javascript:void(0);" data-bs-container="#tooltip-container"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" title="James Anderson"
-                                            class="d-inline-block">
-                                            <img src="assets/images/users/avatar-8.jpg" class="rounded-circle avatar-xs"
-                                                alt="friend">
-                                        </a>
-                                        <a href="javascript:void(0);" class="d-inline-block text-muted fw-bold ms-2">
-                                            +7 more
-                                        </a>
-                                    </div>
-                                </div> <!-- end card-body-->
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item p-3">
-                                        <!-- project progress-->
-                                        <p class="mb-2 fw-bold">Progress <span class="float-end">100%</span></p>
-                                        <div class="progress progress-sm">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="100"
-                                                aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
-                                            </div><!-- /.progress-bar -->
-                                        </div><!-- /.progress -->
-                                    </li>
-                                </ul>
-                            </div> <!-- end card-->
-                        </div> <!-- end col -->
-
-                        <div class="col-md-6 col-xxl-3">
-                            <!-- project card -->
-                            <div class="card d-block">
-                                <div class="card-body">
-                                    <div class="dropdown card-widgets">
-                                        <a href="#" class="dropdown-toggle arrow-none" data-bs-toggle="dropdown"
-                                            aria-expanded="false">
-                                            <i class="ri-more-fill"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-end">
-                                            <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item"><i
-                                                    class="mdi mdi-pencil me-1"></i>Edit</a>
-                                            <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item"><i
-                                                    class="mdi mdi-delete me-1"></i>Delete</a>
-                                            <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item"><i
-                                                    class="mdi mdi-email-outline me-1"></i>Invite</a>
-                                            <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item"><i
-                                                    class="mdi mdi-exit-to-app me-1"></i>Leave</a>
-                                        </div>
-                                    </div>
-                                    <!-- project title-->
-                                    <h4 class="mt-0">
-                                        <a href="apps-projects-details.html" class="text-title">Coffee detail page -
-                                            Main Page</a>
-                                    </h4>
-                                    <div class="badge bg-secondary text-light">Ongoing</div>
-
-                                    <p class="text-muted font-13 my-3">This card has supporting text below as a natural
-                                        lead-in to additional content is a little bit longer...<a
-                                            href="javascript:void(0);" class="fw-bold text-muted">view more</a>
-                                    </p>
-
-                                    <!-- project detail-->
-                                    <p class="mb-1">
-                                        <span class="pe-2 text-nowrap mb-2 d-inline-block">
-                                            <i class="mdi mdi-format-list-bulleted-type text-muted"></i>
-                                            <b>81</b> Tasks
-                                        </span>
-                                        <span class="text-nowrap mb-2 d-inline-block">
-                                            <i class="mdi mdi-comment-multiple-outline text-muted"></i>
-                                            <b>103</b> Comments
-                                        </span>
-                                    </p>
-                                    <div id="tooltip-container1">
-                                        <a href="javascript:void(0);" data-bs-container="#tooltip-container1"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Mat Helme"
-                                            class="d-inline-block">
-                                            <img src="assets/images/users/avatar-1.jpg" class="rounded-circle avatar-xs"
-                                                alt="friend">
-                                        </a>
-
-                                        <a href="javascript:void(0);" data-bs-container="#tooltip-container1"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Michael Zenaty"
-                                            class="d-inline-block">
-                                            <img src="assets/images/users/avatar-2.jpg" class="rounded-circle avatar-xs"
-                                                alt="friend">
-                                        </a>
-
-                                        <a href="javascript:void(0);" data-bs-container="#tooltip-container1"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" title="James Anderson"
-                                            class="d-inline-block">
-                                            <img src="assets/images/users/avatar-3.jpg" class="rounded-circle avatar-xs"
-                                                alt="friend">
-                                        </a>
-                                        <a href="javascript:void(0);" class="d-inline-block text-muted fw-bold ms-2">
-                                            +3 more
-                                        </a>
-                                    </div>
-                                </div> <!-- end card-body-->
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item p-3">
-                                        <!-- project progress-->
-                                        <p class="mb-2 fw-bold">Progress <span class="float-end">28%</span></p>
-                                        <div class="progress progress-sm">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="28"
-                                                aria-valuemin="0" aria-valuemax="100" style="width: 28%;">
-                                            </div><!-- /.progress-bar -->
-                                        </div><!-- /.progress -->
-                                    </li>
-                                </ul>
-                            </div> <!-- end card-->
-                        </div> <!-- end col -->
-                        <div class="col-md-6 col-xxl-3">
-                            <!-- project card -->
-                            <div class="card d-block">
-                                <div class="card-body">
-                                    <div class="dropdown card-widgets">
-                                        <a href="#" class="dropdown-toggle arrow-none" data-bs-toggle="dropdown"
-                                            aria-expanded="false">
-                                            <i class="ri-more-fill"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-end">
-                                            <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item"><i
-                                                    class="mdi mdi-pencil me-1"></i>Edit</a>
-                                            <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item"><i
-                                                    class="mdi mdi-delete me-1"></i>Delete</a>
-                                            <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item"><i
-                                                    class="mdi mdi-email-outline me-1"></i>Invite</a>
-                                            <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item"><i
-                                                    class="mdi mdi-exit-to-app me-1"></i>Leave</a>
-                                        </div>
-                                    </div>
-                                    <!-- project title-->
-                                    <h4 class="mt-0">
-                                        <a href="apps-projects-details.html" class="text-title">Poster illustation
-                                            design</a>
-                                    </h4>
-                                    <div class="badge bg-secondary text-light">Ongoing</div>
-
-                                    <p class="text-muted font-13 my-3">Anim pariatur cliche reprehenderit, enim eiusmod
-                                        high life accusamus terry richardson ad squid...<a href="javascript:void(0);"
-                                            class="fw-bold text-muted">view more</a>
-                                    </p>
-
-                                    <!-- project detail-->
-                                    <p class="mb-1">
-                                        <span class="pe-2 text-nowrap mb-2 d-inline-block">
-                                            <i class="mdi mdi-format-list-bulleted-type text-muted"></i>
-                                            <b>12</b> Tasks
-                                        </span>
-                                        <span class="text-nowrap mb-2 d-inline-block">
-                                            <i class="mdi mdi-comment-multiple-outline text-muted"></i>
-                                            <b>482</b> Comments
-                                        </span>
-                                    </p>
-                                    <div id="tooltip-container2">
-                                        <a href="javascript:void(0);" data-bs-container="#tooltip-container2"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Mat Helme"
-                                            class="d-inline-block">
-                                            <img src="assets/images/users/avatar-4.jpg" class="rounded-circle avatar-xs"
-                                                alt="friend">
-                                        </a>
-
-                                        <a href="javascript:void(0);" data-bs-container="#tooltip-container2"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Michael Zenaty"
-                                            class="d-inline-block">
-                                            <img src="assets/images/users/avatar-5.jpg" class="rounded-circle avatar-xs"
-                                                alt="friend">
-                                        </a>
-                                    </div>
-                                </div> <!-- end card-body-->
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item p-3">
-                                        <!-- project progress-->
-                                        <p class="mb-2 fw-bold">Progress <span class="float-end">63%</span></p>
-                                        <div class="progress progress-sm">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="63"
-                                                aria-valuemin="0" aria-valuemax="100" style="width: 63%;">
-                                            </div><!-- /.progress-bar -->
-                                        </div><!-- /.progress -->
-                                    </li>
-                                </ul>
-                            </div> <!-- end card-->
-                        </div> <!-- end col -->
-
-                        <div class="col-md-6 col-xxl-3">
-                            <!-- project card -->
-                            <div class="card d-block">
-                                <div class="card-body">
-                                    <div class="dropdown card-widgets">
-                                        <a href="#" class="dropdown-toggle arrow-none" data-bs-toggle="dropdown"
-                                            aria-expanded="false">
-                                            <i class="ri-more-fill"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-end">
-                                            <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item"><i
-                                                    class="mdi mdi-pencil me-1"></i>Edit</a>
-                                            <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item"><i
-                                                    class="mdi mdi-delete me-1"></i>Delete</a>
-                                            <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item"><i
-                                                    class="mdi mdi-email-outline me-1"></i>Invite</a>
-                                            <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item"><i
-                                                    class="mdi mdi-exit-to-app me-1"></i>Leave</a>
-                                        </div>
-                                    </div>
-                                    <!-- project title-->
-                                    <h4 class="mt-0">
-                                        <a href="apps-projects-details.html" class="text-title">Drinking bottle graphics
-                                        </a>
-                                    </h4>
-                                    <div class="badge bg-success">Finished</div>
-
-                                    <p class="text-muted font-13 my-3">Some quick example text to build on the card
-                                        title and make up the bulk of the card's content...<a href="javascript:void(0);"
-                                            class="fw-bold text-muted">view more</a>
-                                    </p>
-
-                                    <!-- project detail-->
-                                    <p class="mb-1">
-                                        <span class="pe-2 mb-2 d-inline-block text-nowrap">
-                                            <i class="mdi mdi-format-list-bulleted-type text-muted"></i>
-                                            <b>50</b> Tasks
-                                        </span>
-                                        <span class="text-nowrap mb-2 d-inline-block">
-                                            <i class="mdi mdi-comment-multiple-outline text-muted"></i>
-                                            <b>208</b> Comments
-                                        </span>
-                                    </p>
-                                    <div id="tooltip-container3">
-                                        <a href="javascript:void(0);" data-bs-container="#tooltip-container3"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Mat Helme"
-                                            class="d-inline-block">
-                                            <img src="assets/images/users/avatar-10.jpg"
-                                                class="rounded-circle avatar-xs" alt="friend">
-                                        </a>
-
-                                        <a href="javascript:void(0);" data-bs-container="#tooltip-container3"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Michael Zenaty"
-                                            class="d-inline-block">
-                                            <img src="assets/images/users/avatar-5.jpg" class="rounded-circle avatar-xs"
-                                                alt="friend">
-                                        </a>
-
-                                        <a href="javascript:void(0);" data-bs-container="#tooltip-container3"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" title="James Anderson"
-                                            class="d-inline-block">
-                                            <img src="assets/images/users/avatar-6.jpg" class="rounded-circle avatar-xs"
-                                                alt="friend">
-                                        </a>
-                                        <a href="javascript:void(0);" class="d-inline-block text-muted fw-bold ms-2">
-                                            +2 more
-                                        </a>
-                                    </div>
-                                </div> <!-- end card-body-->
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item p-3">
-                                        <!-- project progress-->
-                                        <p class="mb-2 fw-bold">Progress <span class="float-end">100%</span></p>
-                                        <div class="progress progress-sm">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="100"
-                                                aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
-                                            </div><!-- /.progress-bar -->
-                                        </div><!-- /.progress -->
-                                    </li>
-                                </ul>
-                            </div> <!-- end card-->
-                        </div> <!-- end col -->
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <!-- end row-->
+                    <!-- End Chart -->
 
-                    <div class="row">
-                        <div class="col-md-6 col-xxl-3">
-                            <!-- project card -->
-                            <div class="card d-block">
-                                <!-- project-thumbnail -->
-                                <img class="card-img-top" src="assets/images/projects/project-1.jpg"
-                                    alt="project image cap">
-                                <div class="card-img-overlay">
-                                    <div class="badge bg-secondary text-light p-1">Ongoing</div>
+                    <!-- Start Table -->
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <table class="table table-centered mb-0">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    Aplikasi
+                                                    <span class=" text-success ms-2">
+                                                        3 Recent New
+                                                    </span>
+                                                </th>
+                                                <th class="text-end">
+                                                    <div class="btn btn-primary rounded-pill">
+                                                        20
+                                                    </div>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>All Opens</td>
+                                                <td class="text-end">
+                                                    <div class="btn btn-sm rounded-pill btn-light">
+                                                        11
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Assign to me</td>
+                                                <td class="text-end">
+                                                    <div class="btn btn-sm rounded-pill btn-light">
+                                                        4
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
+                            </div>
+                        </div>
 
-                                <div class="card-body position-relative">
-                                    <!-- project title-->
-                                    <h4 class="mt-0">
-                                        <a href="apps-projects-details.html" class="text-title">Company logo design</a>
-                                    </h4>
-
-                                    <!-- project detail-->
-                                    <p class="mb-3">
-                                        <span class="pe-2 text-nowrap">
-                                            <i class="mdi mdi-format-list-bulleted-type"></i>
-                                            <b>3</b> Tasks
-                                        </span>
-                                        <span class="text-nowrap">
-                                            <i class="mdi mdi-comment-multiple-outline"></i>
-                                            <b>104</b> Comments
-                                        </span>
-                                    </p>
-                                    <div class="mb-3" id="tooltip-container4">
-                                        <a href="javascript:void(0);" data-bs-container="#tooltip-container4"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Mat Helme"
-                                            class="d-inline-block">
-                                            <img src="assets/images/users/avatar-3.jpg" class="rounded-circle avatar-xs"
-                                                alt="friend">
-                                        </a>
-
-                                        <a href="javascript:void(0);" data-bs-container="#tooltip-container4"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Michael Zenaty"
-                                            class="d-inline-block">
-                                            <img src="assets/images/users/avatar-5.jpg" class="rounded-circle avatar-xs"
-                                                alt="friend">
-                                        </a>
-
-                                        <a href="javascript:void(0);" data-bs-container="#tooltip-container4"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" title="James Anderson"
-                                            class="d-inline-block">
-                                            <img src="assets/images/users/avatar-9.jpg" class="rounded-circle avatar-xs"
-                                                alt="friend">
-                                        </a>
-                                    </div>
-
-                                    <!-- project progress-->
-                                    <p class="mb-2 fw-bold">Progress <span class="float-end">45%</span></p>
-                                    <div class="progress progress-sm">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="45"
-                                            aria-valuemin="0" aria-valuemax="100" style="width: 45%;">
-                                        </div><!-- /.progress-bar -->
-                                    </div><!-- /.progress -->
-                                </div> <!-- end card-body-->
-                            </div> <!-- end card-->
-                        </div> <!-- end col -->
-
-                        <div class="col-md-6 col-xxl-3">
-                            <!-- project card -->
-                            <div class="card d-block">
-                                <!-- project-thumbnail -->
-                                <img class="card-img-top" src="assets/images/projects/project-2.jpg"
-                                    alt="project image cap">
-                                <div class="card-img-overlay">
-                                    <div class="badge bg-success p-1">Finished</div>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <table class="table table-centered mb-0">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    Infrastruktur
+                                                    <span class=" text-success ms-2">
+                                                        3 Recent New
+                                                    </span>
+                                                </th>
+                                                <th class="text-end">
+                                                    <div class="btn text-light rounded-pill"
+                                                        style="background-color: #ff7a00;">
+                                                        20
+                                                    </div>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>All Opens</td>
+                                                <td class="text-end">
+                                                    <div class="btn btn-sm rounded-pill btn-light">
+                                                        11
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Assign to me</td>
+                                                <td class="text-end">
+                                                    <div class="btn btn-sm rounded-pill btn-light">
+                                                        4
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
-
-                                <div class="card-body position-relative">
-                                    <!-- project title-->
-                                    <h4 class="mt-0">
-                                        <a href="apps-projects-details.html" class="text-title">Landing page design -
-                                            Home</a>
-                                    </h4>
-
-                                    <!-- project detail-->
-                                    <p class="mb-3">
-                                        <span class="pe-2 text-nowrap">
-                                            <i class="mdi mdi-format-list-bulleted-type"></i>
-                                            <b>11</b> Tasks
-                                        </span>
-                                        <span class="text-nowrap">
-                                            <i class="mdi mdi-comment-multiple-outline"></i>
-                                            <b>254</b> Comments
-                                        </span>
-                                    </p>
-                                    <div class="mb-3" id="tooltip-container5">
-                                        <a href="javascript:void(0);" data-bs-container="#tooltip-container5"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Mat Helme"
-                                            class="d-inline-block">
-                                            <img src="assets/images/users/avatar-10.jpg"
-                                                class="rounded-circle avatar-xs" alt="friend">
-                                        </a>
-
-                                        <a href="javascript:void(0);" data-bs-container="#tooltip-container5"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Michael Zenaty"
-                                            class="d-inline-block">
-                                            <img src="assets/images/users/avatar-5.jpg" class="rounded-circle avatar-xs"
-                                                alt="friend">
-                                        </a>
-
-                                        <a href="javascript:void(0);" data-bs-container="#tooltip-container5"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" title="James Anderson"
-                                            class="d-inline-block">
-                                            <img src="assets/images/users/avatar-7.jpg" class="rounded-circle avatar-xs"
-                                                alt="friend">
-                                        </a>
-                                        <a href="javascript:void(0);" class="d-inline-block text-muted fw-bold ms-2">
-                                            +2 more
-                                        </a>
-                                    </div>
-
-                                    <!-- project progress-->
-                                    <p class="mb-2 fw-bold">Progress <span class="float-end">100%</span></p>
-                                    <div class="progress progress-sm">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="100"
-                                            aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
-                                        </div><!-- /.progress-bar -->
-                                    </div><!-- /.progress -->
-                                </div> <!-- end card-body-->
-                            </div> <!-- end card-->
-                        </div> <!-- end col -->
-
-                        <div class="col-md-6 col-xxl-3">
-                            <!-- project card -->
-                            <div class="card d-block">
-                                <!-- project-thumbnail -->
-                                <img class="card-img-top" src="assets/images/projects/project-3.jpg"
-                                    alt="project image cap">
-                                <div class="card-img-overlay">
-                                    <div class="badge bg-secondary text-light p-1">Ongoing</div>
-                                </div>
-
-                                <div class="card-body position-relative">
-                                    <!-- project title-->
-                                    <h4 class="mt-0">
-                                        <a href="apps-projects-details.html" class="text-title">Product page
-                                            redesign</a>
-                                    </h4>
-
-                                    <!-- project detail-->
-                                    <p class="mb-3">
-                                        <span class="pe-2 text-nowrap">
-                                            <i class="mdi mdi-format-list-bulleted-type"></i>
-                                            <b>21</b> Tasks
-                                        </span>
-                                        <span class="text-nowrap">
-                                            <i class="mdi mdi-comment-multiple-outline"></i>
-                                            <b>668</b> Comments
-                                        </span>
-                                    </p>
-                                    <div class="mb-3" id="tooltip-container6">
-                                        <a href="javascript:void(0);" data-bs-container="#tooltip-container6"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Mat Helme"
-                                            class="d-inline-block">
-                                            <img src="assets/images/users/avatar-6.jpg" class="rounded-circle avatar-xs"
-                                                alt="friend">
-                                        </a>
-
-                                        <a href="javascript:void(0);" data-bs-container="#tooltip-container6"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Michael Zenaty"
-                                            class="d-inline-block">
-                                            <img src="assets/images/users/avatar-7.jpg" class="rounded-circle avatar-xs"
-                                                alt="friend">
-                                        </a>
-
-                                        <a href="javascript:void(0);" data-bs-container="#tooltip-container6"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" title="James Anderson"
-                                            class="d-inline-block">
-                                            <img src="assets/images/users/avatar-8.jpg" class="rounded-circle avatar-xs"
-                                                alt="friend">
-                                        </a>
-                                        <a href="javascript:void(0);" class="d-inline-block text-muted fw-bold ms-2">
-                                            +5 more
-                                        </a>
-                                    </div>
-
-                                    <!-- project progress-->
-                                    <p class="mb-2 fw-bold">Progress <span class="float-end">71%</span></p>
-                                    <div class="progress progress-sm">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="71"
-                                            aria-valuemin="0" aria-valuemax="100" style="width: 71%;">
-                                        </div><!-- /.progress-bar -->
-                                    </div><!-- /.progress -->
-                                </div> <!-- end card-body-->
-                            </div> <!-- end card-->
-                        </div> <!-- end col -->
-
-                        <div class="col-md-6 col-xxl-3">
-                            <!-- project card -->
-                            <div class="card d-block">
-                                <!-- project-thumbnail -->
-                                <img class="card-img-top" src="assets/images/projects/project-4.jpg"
-                                    alt="project image cap">
-                                <div class="card-img-overlay">
-                                    <div class="badge bg-secondary text-light p-1">Ongoing</div>
-                                </div>
-
-                                <div class="card-body position-relative">
-                                    <!-- project title-->
-                                    <h4 class="mt-0">
-                                        <a href="apps-projects-details.html" class="text-title">Coffee detail page -
-                                            Main Page</a>
-                                    </h4>
-
-                                    <!-- project detail-->
-                                    <p class="mb-3">
-                                        <span class="pe-2 text-nowrap">
-                                            <i class="mdi mdi-format-list-bulleted-type"></i>
-                                            <b>18</b> Tasks
-                                        </span>
-                                        <span class="text-nowrap">
-                                            <i class="mdi mdi-comment-multiple-outline"></i>
-                                            <b>259</b> Comments
-                                        </span>
-                                    </p>
-                                    <div class="mb-3" id="tooltip-container7">
-                                        <a href="javascript:void(0);" data-bs-container="#tooltip-container7"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Mat Helme"
-                                            class="d-inline-block">
-                                            <img src="assets/images/users/avatar-2.jpg" class="rounded-circle avatar-xs"
-                                                alt="friend">
-                                        </a>
-
-                                        <a href="javascript:void(0);" data-bs-container="#tooltip-container7"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Michael Zenaty"
-                                            class="d-inline-block">
-                                            <img src="assets/images/users/avatar-3.jpg" class="rounded-circle avatar-xs"
-                                                alt="friend">
-                                        </a>
-                                    </div>
-
-                                    <!-- project progress-->
-                                    <p class="mb-2 fw-bold">Progress <span class="float-end">52%</span></p>
-                                    <div class="progress progress-sm">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="52"
-                                            aria-valuemin="0" aria-valuemax="100" style="width: 52%;">
-                                        </div><!-- /.progress-bar -->
-                                    </div><!-- /.progress -->
-                                </div> <!-- end card-body-->
-                            </div> <!-- end card-->
-                        </div> <!-- end col -->
+                            </div>
+                        </div>
                     </div>
-                    <!-- end row-->
+                    <!-- End Table -->
 
                 </div> <!-- container -->
 
@@ -1991,6 +1595,12 @@
 
     <!-- Vendor js -->
     <script src="assets/js/vendor.min.js"></script>
+
+    <!-- Apex Charts js -->
+    <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+
+    <!-- CRM Project Dashboard Demo js -->
+    <script src="assets/js/pages/demo.crm-project-2.js"></script>
 
     <!-- App js -->
     <script src="assets/js/app.min.js"></script>
