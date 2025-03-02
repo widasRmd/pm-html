@@ -1012,15 +1012,14 @@
                                                             </button>
                                                         </div>
                                                         <div class="col-sm-auto">
-
-                                                            <button class="btn btn-danger">
+                                                            <a href="#close-ticket-offcanvas" data-bs-toggle="offcanvas"
+                                                                class="btn btn-danger w-100">
                                                                 <i class='uil uil-closed'></i> Close this ticket
-                                                            </button>
+                                                            </a>
 
-                                                            <!-- <button class="btn btn-secondary">
+                                                            <!-- <button class="btn btn-secondary w-100">
                                                                 <i class='uil uil-closed'></i> Closed
                                                             </button> -->
-
                                                         </div> <!-- end col -->
                                                     </div> <!-- end row-->
                                                 </form>
@@ -1068,6 +1067,43 @@
 
     </div>
     <!-- END wrapper -->
+
+    <!-- Close Ticket -->
+    <div class="offcanvas offcanvas-end" tabindex="1" id="close-ticket-offcanvas">
+        <div class="d-flex align-items-center bg-primary p-3 offcanvas-header">
+            <h5 class="text-white m-0">Close Ticket</h5>
+            <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+        </div>
+
+        <div class="offcanvas-body p-0">
+            <div data-simplebar class="">
+                <div class="card mb-0 p-3">
+                    <form class="p-2">
+                        <div class="mb-3">
+                            <label class="form-label">Tickets</label>
+                            <select class="form-select form-control-light">
+                                <option>Select</option>
+                                <option>#ID-201 - Location KP</option>
+                                <option>#ID-202 - Location KP</option>
+                                <option>#ID-203 - Location KP</option>
+                                <option>#ID-204 - Location KP</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-2 pt-2">
+                            <button type="submit" class="btn btn-primary w-100">Close</button>
+                        </div>
+
+                        <div class="mb-3">
+                            <button type="button" class="btn btn-light w-100" data-bs-dismiss="offcanvas"
+                                aria-label="Close">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Theme Settings -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="theme-settings-offcanvas">
